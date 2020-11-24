@@ -15,7 +15,10 @@ target 'playkit-ios-broadpeak_Example' do
   pod 'SmartLib-v3/Generic', '03.02.00.3318'
   
   pod 'KalturaPlayer', :git => 'https://github.com/chausov/kaltura-player-ios.git', :branch => 'develop'
+  #pod 'KalturaPlayer', :path => '../../kaltura-player-ios'
+  
   pod 'PlayKit' , :git => 'https://github.com/chausov/playkit-ios', :branch => 'develop'
+  #pod 'PlayKit', :path => '../../playkit-ios'
   
   target 'playkit-ios-broadpeak_Tests' do
     inherit! :search_paths
