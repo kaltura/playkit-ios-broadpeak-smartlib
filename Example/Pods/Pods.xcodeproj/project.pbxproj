@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E93B92427028B9B3E323A1270980348 /* Pods-playkit-ios-broadpeak_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7808A3433AE2CC63B51EF371BD3101DB /* Pods-playkit-ios-broadpeak_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FE4614FD98673CB7BFF61A39506C1DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4B626E5BAEC66CDE9C0235D263E74A6E /* Pods-playkit-ios-broadpeak_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18CD5889F98F4EFA7F68CD9BB8BD5865 /* Pods-playkit-ios-broadpeak_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		542EAECBABE50AB4AD0B0ED68D385EA8 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AB786B30469112621A12325427D57 /* ReplaceMe.swift */; };
+		803A1008D0360DBAE3160694F4E99C57 /* Pods-playkit-ios-broadpeak_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B869C989AD91D0B643F09D414922E6BC /* Pods-playkit-ios-broadpeak_Tests-dummy.m */; };
+		ADB94977BBB66ECD06AACD7091357878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		BA7260DE24CA54FD70591F30A5B2E1E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		E8E18E0B9FED8BD8AE4C99AA5E72FFBA /* playkit-ios-broadpeak-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1907DDE9BCC311E65518B65439BA790 /* playkit-ios-broadpeak-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E97D076890C04666AD3BFF2996CE37EA /* playkit-ios-broadpeak-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AC39D858EA812836CF56CC0277884F /* playkit-ios-broadpeak-dummy.m */; };
+		F5C30F16491E75AB77219038023C7F59 /* Pods-playkit-ios-broadpeak_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63397C1ABC1599224370DB62D11C1CB4 /* Pods-playkit-ios-broadpeak_Example-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EEB1CB2AE435736696197AE736C9137 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 558108E6DB3E92F5A31B4EE8EC889626;
+			remoteInfo = "Pods-playkit-ios-broadpeak_Example";
+		};
+		564847E219997D8A8FA4BFF2ED18B94A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D50B9A41F0B38667551BA645CB642F8F;
+			remoteInfo = "playkit-ios-broadpeak";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04A3605430A5F485F88FDC4F05494F02 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-playkit-ios-broadpeak_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		171AC6E3FEBB5F21BFBFD592C3630197 /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		18CD5889F98F4EFA7F68CD9BB8BD5865 /* Pods-playkit-ios-broadpeak_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-playkit-ios-broadpeak_Tests-umbrella.h"; sourceTree = "<group>"; };
+		216AB786B30469112621A12325427D57 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = "playkit-ios-broadpeak/Classes/ReplaceMe.swift"; sourceTree = "<group>"; };
+		22124D399BD8D5E8CC5DBF798F5DD589 /* Pods-playkit-ios-broadpeak_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-playkit-ios-broadpeak_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		2D978205F3EF9F1EE35E1D7D5977CAFB /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-playkit-ios-broadpeak_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2F4B0816CE34F0EC41837B32744CAA46 /* Pods-playkit-ios-broadpeak_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-playkit-ios-broadpeak_Example.modulemap"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		388BB109A42C544EC8E512FBEE217639 /* playkit-ios-broadpeak.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "playkit-ios-broadpeak.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		398EF71C4DED05F48B5EE53F88D72866 /* playkit-ios-broadpeak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "playkit-ios-broadpeak.debug.xcconfig"; sourceTree = "<group>"; };
+		39DCAB754CEC6D49C66A773B412CC619 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3EF1BC0C9F15F5CDCFEEC4A2315AF9BA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		3FB92ED59A834849C36A3FBFCC74278D /* Pods-playkit-ios-broadpeak_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-playkit-ios-broadpeak_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4FF78F36162D7CA870F4C1FFD1B7807B /* playkit-ios-broadpeak-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "playkit-ios-broadpeak-Info.plist"; sourceTree = "<group>"; };
+		57207D27E06641F9D9E0684B48BC6DDC /* Pods_playkit_ios_broadpeak_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_playkit_ios_broadpeak_Tests.framework; path = "Pods-playkit-ios-broadpeak_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63397C1ABC1599224370DB62D11C1CB4 /* Pods-playkit-ios-broadpeak_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-playkit-ios-broadpeak_Example-dummy.m"; sourceTree = "<group>"; };
+		716A26A36C875C1A7CDC8B0762827282 /* Pods-playkit-ios-broadpeak_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-playkit-ios-broadpeak_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		73C8ABBCB19BADF23F7F4F1DF626E1A9 /* playkit-ios-broadpeak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "playkit-ios-broadpeak.release.xcconfig"; sourceTree = "<group>"; };
+		7808A3433AE2CC63B51EF371BD3101DB /* Pods-playkit-ios-broadpeak_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-playkit-ios-broadpeak_Example-umbrella.h"; sourceTree = "<group>"; };
+		80455BCF5B29B749672D72811E30A283 /* Pods-playkit-ios-broadpeak_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-playkit-ios-broadpeak_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8965B799670BEF7498541802DAEA510E /* Pods-playkit-ios-broadpeak_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-playkit-ios-broadpeak_Example-Info.plist"; sourceTree = "<group>"; };
+		93E8B691A89ACFA120F5E72B08E2D98C /* playkit-ios-broadpeak.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "playkit-ios-broadpeak.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1907DDE9BCC311E65518B65439BA790 /* playkit-ios-broadpeak-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "playkit-ios-broadpeak-umbrella.h"; sourceTree = "<group>"; };
+		AD393596B866E4C7251EC9D8CF753EF6 /* playkit-ios-broadpeak-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "playkit-ios-broadpeak-prefix.pch"; sourceTree = "<group>"; };
+		B55E1AFFA1990588089E30D9BD1CCD4B /* Pods_playkit_ios_broadpeak_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_playkit_ios_broadpeak_Example.framework; path = "Pods-playkit-ios-broadpeak_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B869C989AD91D0B643F09D414922E6BC /* Pods-playkit-ios-broadpeak_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-playkit-ios-broadpeak_Tests-dummy.m"; sourceTree = "<group>"; };
+		B8AC39D858EA812836CF56CC0277884F /* playkit-ios-broadpeak-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "playkit-ios-broadpeak-dummy.m"; sourceTree = "<group>"; };
+		C7A1F6BE8FAEED1BD1A91BA51262E35C /* Pods-playkit-ios-broadpeak_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-playkit-ios-broadpeak_Tests-Info.plist"; sourceTree = "<group>"; };
+		D5F67D46EA1BD33C9FD63537DCADDE8C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D8FA19E400578E8A8474081EC14716EC /* Pods-playkit-ios-broadpeak_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-playkit-ios-broadpeak_Tests.modulemap"; sourceTree = "<group>"; };
+		DD783B4AF8B07BF97881D5C789B1CBF0 /* Pods-playkit-ios-broadpeak_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-playkit-ios-broadpeak_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F9A824B5B517FFD5A3504AFDBABD8B5D /* playkit_ios_broadpeak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = playkit_ios_broadpeak.framework; path = "playkit-ios-broadpeak.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		657138C87278CCEF35CB4EAFB6AEDA85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FE4614FD98673CB7BFF61A39506C1DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		848C5FAD32FB76A0A71AFC17850D232C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA7260DE24CA54FD70591F30A5B2E1E1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5391DC56544C9AB53F32FBF29B90B4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB94977BBB66ECD06AACD7091357878 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		289AE6C77E00298DFDC568E816D5BC9D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				3EF1BC0C9F15F5CDCFEEC4A2315AF9BA /* LICENSE */,
+				388BB109A42C544EC8E512FBEE217639 /* playkit-ios-broadpeak.podspec */,
+				D5F67D46EA1BD33C9FD63537DCADDE8C /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		6168B1AF76AFE00340B962290A0491EB /* playkit-ios-broadpeak */ = {
+			isa = PBXGroup;
+			children = (
+				216AB786B30469112621A12325427D57 /* ReplaceMe.swift */,
+				289AE6C77E00298DFDC568E816D5BC9D /* Pod */,
+				A4C8BD4811CF39D448B28D66004562D7 /* Support Files */,
+			);
+			name = "playkit-ios-broadpeak";
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7C478433474EA16B005313B3EED9B8A8 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6168B1AF76AFE00340B962290A0491EB /* playkit-ios-broadpeak */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DDC9CB90A79B67A49A79DB9F1335C15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9A824B5B517FFD5A3504AFDBABD8B5D /* playkit_ios_broadpeak.framework */,
+				B55E1AFFA1990588089E30D9BD1CCD4B /* Pods_playkit_ios_broadpeak_Example.framework */,
+				57207D27E06641F9D9E0684B48BC6DDC /* Pods_playkit_ios_broadpeak_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4C8BD4811CF39D448B28D66004562D7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				93E8B691A89ACFA120F5E72B08E2D98C /* playkit-ios-broadpeak.modulemap */,
+				B8AC39D858EA812836CF56CC0277884F /* playkit-ios-broadpeak-dummy.m */,
+				4FF78F36162D7CA870F4C1FFD1B7807B /* playkit-ios-broadpeak-Info.plist */,
+				AD393596B866E4C7251EC9D8CF753EF6 /* playkit-ios-broadpeak-prefix.pch */,
+				A1907DDE9BCC311E65518B65439BA790 /* playkit-ios-broadpeak-umbrella.h */,
+				398EF71C4DED05F48B5EE53F88D72866 /* playkit-ios-broadpeak.debug.xcconfig */,
+				73C8ABBCB19BADF23F7F4F1DF626E1A9 /* playkit-ios-broadpeak.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/playkit-ios-broadpeak";
+			sourceTree = "<group>";
+		};
+		B945F368BE07BA76C71DCD8AA8B7E89E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E68D3179E45FFBE9605DC62E87629100 /* Pods-playkit-ios-broadpeak_Example */,
+				DCB21023F40093704D4C15CDBEE813D3 /* Pods-playkit-ios-broadpeak_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				7C478433474EA16B005313B3EED9B8A8 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				7DDC9CB90A79B67A49A79DB9F1335C15 /* Products */,
+				B945F368BE07BA76C71DCD8AA8B7E89E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCB21023F40093704D4C15CDBEE813D3 /* Pods-playkit-ios-broadpeak_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D8FA19E400578E8A8474081EC14716EC /* Pods-playkit-ios-broadpeak_Tests.modulemap */,
+				716A26A36C875C1A7CDC8B0762827282 /* Pods-playkit-ios-broadpeak_Tests-acknowledgements.markdown */,
+				3FB92ED59A834849C36A3FBFCC74278D /* Pods-playkit-ios-broadpeak_Tests-acknowledgements.plist */,
+				B869C989AD91D0B643F09D414922E6BC /* Pods-playkit-ios-broadpeak_Tests-dummy.m */,
+				C7A1F6BE8FAEED1BD1A91BA51262E35C /* Pods-playkit-ios-broadpeak_Tests-Info.plist */,
+				18CD5889F98F4EFA7F68CD9BB8BD5865 /* Pods-playkit-ios-broadpeak_Tests-umbrella.h */,
+				171AC6E3FEBB5F21BFBFD592C3630197 /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */,
+				39DCAB754CEC6D49C66A773B412CC619 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */,
+			);
+			name = "Pods-playkit-ios-broadpeak_Tests";
+			path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests";
+			sourceTree = "<group>";
+		};
+		E68D3179E45FFBE9605DC62E87629100 /* Pods-playkit-ios-broadpeak_Example */ = {
+			isa = PBXGroup;
+			children = (
+				2F4B0816CE34F0EC41837B32744CAA46 /* Pods-playkit-ios-broadpeak_Example.modulemap */,
+				80455BCF5B29B749672D72811E30A283 /* Pods-playkit-ios-broadpeak_Example-acknowledgements.markdown */,
+				22124D399BD8D5E8CC5DBF798F5DD589 /* Pods-playkit-ios-broadpeak_Example-acknowledgements.plist */,
+				63397C1ABC1599224370DB62D11C1CB4 /* Pods-playkit-ios-broadpeak_Example-dummy.m */,
+				DD783B4AF8B07BF97881D5C789B1CBF0 /* Pods-playkit-ios-broadpeak_Example-frameworks.sh */,
+				8965B799670BEF7498541802DAEA510E /* Pods-playkit-ios-broadpeak_Example-Info.plist */,
+				7808A3433AE2CC63B51EF371BD3101DB /* Pods-playkit-ios-broadpeak_Example-umbrella.h */,
+				04A3605430A5F485F88FDC4F05494F02 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */,
+				2D978205F3EF9F1EE35E1D7D5977CAFB /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */,
+			);
+			name = "Pods-playkit-ios-broadpeak_Example";
+			path = "Target Support Files/Pods-playkit-ios-broadpeak_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0F1B0EF80F90BFCD4EE53D5F7CA68860 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E93B92427028B9B3E323A1270980348 /* Pods-playkit-ios-broadpeak_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D4ADDEBF27875B0ED8F632C5179BE54 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8E18E0B9FED8BD8AE4C99AA5E72FFBA /* playkit-ios-broadpeak-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D401BEDE31441819E08F36D204E374CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B626E5BAEC66CDE9C0235D263E74A6E /* Pods-playkit-ios-broadpeak_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		558108E6DB3E92F5A31B4EE8EC889626 /* Pods-playkit-ios-broadpeak_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 519AA08DEDB3E7E148FDC54CAFF54307 /* Build configuration list for PBXNativeTarget "Pods-playkit-ios-broadpeak_Example" */;
+			buildPhases = (
+				0F1B0EF80F90BFCD4EE53D5F7CA68860 /* Headers */,
+				B53FACBBD39BD8ECAA921DA790DF3A9F /* Sources */,
+				657138C87278CCEF35CB4EAFB6AEDA85 /* Frameworks */,
+				CAD64DB680AB0DA458043074F4502E3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77DDDCF3674FA70DA649A29F249BE7A6 /* PBXTargetDependency */,
+			);
+			name = "Pods-playkit-ios-broadpeak_Example";
+			productName = "Pods-playkit-ios-broadpeak_Example";
+			productReference = B55E1AFFA1990588089E30D9BD1CCD4B /* Pods_playkit_ios_broadpeak_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		906E61805971B83DE8E5C81C94C5C5C2 /* Pods-playkit-ios-broadpeak_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8378B3765BB4A57B334D93C29DA991AF /* Build configuration list for PBXNativeTarget "Pods-playkit-ios-broadpeak_Tests" */;
+			buildPhases = (
+				D401BEDE31441819E08F36D204E374CD /* Headers */,
+				ED74F032A9614AFB616986D1E6F916A0 /* Sources */,
+				848C5FAD32FB76A0A71AFC17850D232C /* Frameworks */,
+				D84F1F0EEE6197C73E1260FD2B49DEDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AFA1B6E0153819C279C05602A0AED89 /* PBXTargetDependency */,
+			);
+			name = "Pods-playkit-ios-broadpeak_Tests";
+			productName = "Pods-playkit-ios-broadpeak_Tests";
+			productReference = 57207D27E06641F9D9E0684B48BC6DDC /* Pods_playkit_ios_broadpeak_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D50B9A41F0B38667551BA645CB642F8F /* playkit-ios-broadpeak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 642764830A0EF42F89C4274D779AAC84 /* Build configuration list for PBXNativeTarget "playkit-ios-broadpeak" */;
+			buildPhases = (
+				9D4ADDEBF27875B0ED8F632C5179BE54 /* Headers */,
+				898B82D94A3AF470D685B46EE21F23AB /* Sources */,
+				A5391DC56544C9AB53F32FBF29B90B4F /* Frameworks */,
+				A109D98D793F45F511E2A0348D2966D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "playkit-ios-broadpeak";
+			productName = "playkit-ios-broadpeak";
+			productReference = F9A824B5B517FFD5A3504AFDBABD8B5D /* playkit_ios_broadpeak.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 7DDC9CB90A79B67A49A79DB9F1335C15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D50B9A41F0B38667551BA645CB642F8F /* playkit-ios-broadpeak */,
+				558108E6DB3E92F5A31B4EE8EC889626 /* Pods-playkit-ios-broadpeak_Example */,
+				906E61805971B83DE8E5C81C94C5C5C2 /* Pods-playkit-ios-broadpeak_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A109D98D793F45F511E2A0348D2966D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD64DB680AB0DA458043074F4502E3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D84F1F0EEE6197C73E1260FD2B49DEDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		898B82D94A3AF470D685B46EE21F23AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97D076890C04666AD3BFF2996CE37EA /* playkit-ios-broadpeak-dummy.m in Sources */,
+				542EAECBABE50AB4AD0B0ED68D385EA8 /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B53FACBBD39BD8ECAA921DA790DF3A9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C30F16491E75AB77219038023C7F59 /* Pods-playkit-ios-broadpeak_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED74F032A9614AFB616986D1E6F916A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				803A1008D0360DBAE3160694F4E99C57 /* Pods-playkit-ios-broadpeak_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1AFA1B6E0153819C279C05602A0AED89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-playkit-ios-broadpeak_Example";
+			target = 558108E6DB3E92F5A31B4EE8EC889626 /* Pods-playkit-ios-broadpeak_Example */;
+			targetProxy = 3EEB1CB2AE435736696197AE736C9137 /* PBXContainerItemProxy */;
+		};
+		77DDDCF3674FA70DA649A29F249BE7A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "playkit-ios-broadpeak";
+			target = D50B9A41F0B38667551BA645CB642F8F /* playkit-ios-broadpeak */;
+			targetProxy = 564847E219997D8A8FA4BFF2ED18B94A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		347E3873943B2FB271E5D2D34A081042 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73C8ABBCB19BADF23F7F4F1DF626E1A9 /* playkit-ios-broadpeak.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/playkit-ios-broadpeak/playkit-ios-broadpeak-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/playkit-ios-broadpeak/playkit-ios-broadpeak-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/playkit-ios-broadpeak/playkit-ios-broadpeak.modulemap";
+				PRODUCT_MODULE_NAME = playkit_ios_broadpeak;
+				PRODUCT_NAME = playkit_ios_broadpeak;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AD03DC26F8159CD8A77DCCAA4CECEEE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A3605430A5F485F88FDC4F05494F02 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B2D7DCE86DCB23F4547AE507B40B17AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 398EF71C4DED05F48B5EE53F88D72866 /* playkit-ios-broadpeak.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/playkit-ios-broadpeak/playkit-ios-broadpeak-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/playkit-ios-broadpeak/playkit-ios-broadpeak-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/playkit-ios-broadpeak/playkit-ios-broadpeak.modulemap";
+				PRODUCT_MODULE_NAME = playkit_ios_broadpeak;
+				PRODUCT_NAME = playkit_ios_broadpeak;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D09DBC11BD70C8D10B11242704C23B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39DCAB754CEC6D49C66A773B412CC619 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D5263482B7600AEC5E6F6C325BA7E9F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D978205F3EF9F1EE35E1D7D5977CAFB /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DC63AB7DF0E64EA0953BAAA9487F48A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 171AC6E3FEBB5F21BFBFD592C3630197 /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		519AA08DEDB3E7E148FDC54CAFF54307 /* Build configuration list for PBXNativeTarget "Pods-playkit-ios-broadpeak_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD03DC26F8159CD8A77DCCAA4CECEEE0 /* Debug */,
+				D5263482B7600AEC5E6F6C325BA7E9F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		642764830A0EF42F89C4274D779AAC84 /* Build configuration list for PBXNativeTarget "playkit-ios-broadpeak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2D7DCE86DCB23F4547AE507B40B17AF /* Debug */,
+				347E3873943B2FB271E5D2D34A081042 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8378B3765BB4A57B334D93C29DA991AF /* Build configuration list for PBXNativeTarget "Pods-playkit-ios-broadpeak_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC63AB7DF0E64EA0953BAAA9487F48A6 /* Debug */,
+				D09DBC11BD70C8D10B11242704C23B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

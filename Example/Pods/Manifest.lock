@@ -1,0 +1,16 @@
+PODS:
+  - playkit-ios-broadpeak (0.1.0)
+
+DEPENDENCIES:
+  - playkit-ios-broadpeak (from `../`)
+
+EXTERNAL SOURCES:
+  playkit-ios-broadpeak:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  playkit-ios-broadpeak: 39cd0d7c4543e1e612a228340b11070120889211
+
+PODFILE CHECKSUM: c93124f2338ac97ee081c3d437cae38e531980a2
+
+COCOAPODS: 1.9.3

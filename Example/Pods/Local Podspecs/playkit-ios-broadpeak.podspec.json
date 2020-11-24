@@ -1,0 +1,22 @@
+{
+  "name": "playkit-ios-broadpeak",
+  "version": "0.1.0",
+  "summary": "A short description of playkit-ios-broadpeak.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Sergey Chausov/playkit-ios-broadpeak",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Sergey Chausov": "chouzoff@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Sergey Chausov/playkit-ios-broadpeak.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "playkit-ios-broadpeak/Classes/**/*"
+}

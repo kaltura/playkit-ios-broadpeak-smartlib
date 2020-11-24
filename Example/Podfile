@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'playkit-ios-broadpeak_Example' do
+  pod 'playkit-ios-broadpeak', :path => '../'
+
+  target 'playkit-ios-broadpeak_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
