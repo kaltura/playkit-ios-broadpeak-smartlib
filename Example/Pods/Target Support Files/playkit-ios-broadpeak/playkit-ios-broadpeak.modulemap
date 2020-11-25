@@ -1,6 +1,0 @@
-framework module playkit_ios_broadpeak {
-  umbrella header "playkit-ios-broadpeak-umbrella.h"
-
-  export *
-  module * { export * }
-}
