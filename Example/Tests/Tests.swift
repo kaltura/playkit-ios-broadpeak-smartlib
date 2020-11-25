@@ -1,5 +1,5 @@
 import XCTest
-import playkit-ios-broadpeak
+import PlayKitBroadpeak
 
 class Tests: XCTestCase {
     
