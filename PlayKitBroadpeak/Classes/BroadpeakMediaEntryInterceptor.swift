@@ -73,10 +73,10 @@ import KalturaPlayer
 
 extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
     
-    @objc public func apply(entry: PKMediaEntry, completion: @escaping (Error?) -> Void) {
+    @objc public func apply(on mediaEntry: PKMediaEntry, completion: @escaping (Error?) -> Void) {
         
-        guard let sources = entry.sources, !sources.isEmpty else {
-            PKLog.error("Missing sources in provided MediaEntry: \(entry.id)")
+        guard let sources = mediaEntry.sources, !sources.isEmpty else {
+            PKLog.error("Missing sources in provided MediaEntry: \(mediaEntry.id)")
             let error = BroadpeakPluginError.invalidMediaEntry
             self.messageBus?.post(PluginEvent.Error(nsError: error.asNSError))
             completion(error)
