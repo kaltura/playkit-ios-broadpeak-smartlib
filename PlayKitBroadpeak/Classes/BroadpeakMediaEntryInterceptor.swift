@@ -20,7 +20,7 @@ import KalturaPlayer
     
     var config: BroadpeakConfig
     
-    var completionHandler: ((Error?) -> Void)?
+    var completionHandler: (() -> Void)?
     
     public required init(player: Player, pluginConfig: Any?, messageBus: MessageBus) throws {
         guard let config = pluginConfig as? BroadpeakConfig else {
@@ -73,13 +73,13 @@ import KalturaPlayer
 
 extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
     
-    @objc public func apply(on mediaEntry: PKMediaEntry, completion: @escaping (Error?) -> Void) {
+    @objc public func apply(on mediaEntry: PKMediaEntry, completion: @escaping () -> Void) {
         
         guard let sources = mediaEntry.sources, !sources.isEmpty else {
             PKLog.error("Missing sources in provided MediaEntry: \(mediaEntry.id)")
             let error = BroadpeakPluginError.invalidMediaEntry
             self.messageBus?.post(PluginEvent.Error(nsError: error.asNSError))
-            completion(error)
+            completion()
             return
         }
         
@@ -105,7 +105,7 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
             }
             
             DispatchQueue.main.async {
-                self?.completionHandler?(nil)
+                self?.completionHandler?()
             }
         }
     }
