@@ -55,7 +55,7 @@ PlayKitManager.shared.registerPlugin(BroadpeakMediaEntryInterceptor.self)
 return true
 }
 ```
-### Next step, you have to create plugin config and add it to player:
+### Create plugin config and add it to player:
 Create plugin config parameters can be different than shown on example, it depends on your integration with Broadpeak.
 ```swift
 import PlayKit
@@ -78,6 +78,11 @@ playerOptions.pluginConfig = PluginConfig(config: [BroadpeakMediaEntryIntercepto
 kalturaOTTPlayer = KalturaOTTPlayer(options: playerOptions)
 
 ```
+It is possible to update player with new options if needed.
+```swift
+kalturaOTTPlayer.updatePlayerOptions(playerOptions)
+```
+
 
 ### iOS 14 and local network privacy:
 Since iOS 14, the system requires a specific permission to allow the nanoCDN discovery used by SmartLib.
