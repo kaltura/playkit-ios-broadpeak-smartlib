@@ -35,9 +35,10 @@ pod install
 ```
 
 #### Original installation guide for iOS and tvOS Broadpeak SmartLib.
-Follow the steps of how to add Broadpeak private repo to CocoaPods on your Mac.
-[iOS Generic](https://delivery-platform.broadpeak.tv/docs/?solution=ios-generic)  
-[iOS Generic](https://delivery-platform.broadpeak.tv/docs/?solution=tvos-generic)  
+Follow the steps of how to add Broadpeak private repo to CocoaPods on your Mac.  
+
+[iOS Generic](https://delivery-platform.broadpeak.tv/docs/?solution=ios-generic)    
+[tvOS Generic](https://delivery-platform.broadpeak.tv/docs/?solution=tvos-generic)  
 
 ## Usage
 ### In the AppDelegate:
@@ -55,7 +56,7 @@ return true
 }
 ```
 ### Next step, you have to create plugin config and add it to player:
-Create plugin config, parameters can be different that shown on example, it depends on your integration with Broadpeak.
+Create plugin config parameters can be different than shown on example, it depends on your integration with Broadpeak.
 ```swift
 let bpConfig = BroadpeakConfig()
 bpConfig.analyticsAddress = ""
