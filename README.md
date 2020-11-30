@@ -30,11 +30,7 @@ source "https://#{@@broadpeak_platform_login}:#{@@broadpeak_platform_password}@d
 
 Broadpeak SmartLib dependency hosted in the private repository that requires authorisation you have to specify Broadpeak platform credentials in the plugin-credentials.rb file. In the Example folder of Kaltura plugin repository you can find file [Template_plugin-credentials.rb](https://github.com/chausov/playkit-ios-broadpeak-smartlib/blob/development/Example/Template_plugin-credentials.rb) Rename it to plugin-credentials.rb and add it to .gitignore if you don't like to share credentials in your repository. You can follow same implementation like in PlayKitBroadpeak Example.
 
-[Example of the podfile you can find by following this link](https://github.com/chausov/playkit-ios-broadpeak-smartlib/blob/development/Example/Podfile)
-
-Original installation guide for iOS and tvOS Broadpeak SmartLib. Follow the steps of how to add Broadpeak private repo to CocoaPods on your Mac.
-https://delivery-platform.broadpeak.tv/docs/?solution=ios-generic 
-https://delivery-platform.broadpeak.tv/docs/?solution=tvos-generic 
+[Example of the podfile you can find by following this link](https://github.com/chausov/playkit-ios-broadpeak-smartlib/blob/development/Example/Podfile)  
 
 Once you setup everything run command
 ```ruby
@@ -43,9 +39,8 @@ pod install
 
 #### Original installation guide for iOS and tvOS Broadpeak SmartLib.
 Follow the steps of how to add Broadpeak private repo to CocoaPods on your Mac.
-[](https://delivery-platform.broadpeak.tv/docs/?solution=ios-generic) 
-[](https://delivery-platform.broadpeak.tv/docs/?solution=tvos-generic) 
-
+[iOS Generic](https://delivery-platform.broadpeak.tv/docs/?solution=ios-generic)  
+[iOS Generic](https://delivery-platform.broadpeak.tv/docs/?solution=tvos-generic)  
 
 ## Usage
 ### In the AppDelegate:
@@ -78,7 +73,7 @@ let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
 ### iOS 14 and local network privacy:
 Since iOS 14, the system requires a specific permission to allow the nanoCDN discovery used by SmartLib.
 #### Make your declaration
-[Bonjour services](https://developer.apple.com/documentation/bundleresources/information_property_list/nsbonjourservices)
+[Bonjour services](https://developer.apple.com/documentation/bundleresources/information_property_list/nsbonjourservices)  
 Declare the nanoCDN service name “_nanocdn._tcp” in your app’s Info.plist.
 ```xml
 <key>NSBonjourServices</key>
@@ -88,7 +83,7 @@ Declare the nanoCDN service name “_nanocdn._tcp” in your app’s Info.plist.
 ```
 
 #### Provide context
-[Privacy - Local Network Usage Description](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocalnetworkusagedescription)
+[Privacy - Local Network Usage Description](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocalnetworkusagedescription)  
 After declaring this service, you also need to provide a reason string, which provides context to someone when your app attempts to access a local network. Make sure this text clearly explains what your app is doing with the information it discovers from the local network and how receiving this data enables a necessary experience in your app.
 ```xml
 <key>NSLocalNetworkUsageDescription</key>
@@ -96,7 +91,7 @@ After declaring this service, you also need to provide a reason string, which pr
 ```
 
 #### Additional resouces
-[Protect privacy during device discovery](https://developer.apple.com/news/?id=0oi77447)
+[Protect privacy during device discovery](https://developer.apple.com/news/?id=0oi77447)  
 [Support local network privacy in your app](https://developer.apple.com/videos/play/wwdc2020/10110/)
 
 
