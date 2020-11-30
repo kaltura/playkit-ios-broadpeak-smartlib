@@ -33,7 +33,7 @@ https://delivery-platform.broadpeak.tv/docs/
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'PlayKit/AnalyticsCommon', '~> 3.8'
-  s.dependency 'KalturaPlayer/Core'
+  s.dependency 'KalturaPlayer/Interceptor'
   s.ios.dependency 'SmartLib-v3/Generic', '03.02.00.3318'
   s.tvos.dependency 'SmartLib-v3/Generic+tvOS', '03.02.00.3318'
   
