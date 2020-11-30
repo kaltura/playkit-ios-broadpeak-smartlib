@@ -13,14 +13,23 @@ import PlayKit
 
 @objc public class BroadpeakEvent: PKEvent {
     
-    static let codeKey = "code"
-    static let messageKey = "message"
+    struct BroadpeakEventDataKeys {
+        static let codeKey = "code"
+        static let messageKey = "message"
+        static let error = "error"
+    }
     
-    @objc public static let broadpeakError: BroadpeakEvent.Type = BroadpeakEvent.BroadpeakError.self
+    @objc public static let error: BroadpeakEvent.Type = BroadpeakEvent.Error.self
     
-    class BroadpeakError : BroadpeakEvent {
-        convenience init(code: String?, message: String?) {
-            self.init([BroadpeakEvent.codeKey: code ?? "", BroadpeakEvent.messageKey: message ?? ""])
+    class Error: BroadpeakEvent {
+        convenience init(nsError: NSError) {
+            self.init([BroadpeakEventDataKeys.error: nsError])
+        }
+        
+        convenience init(error: BroadpeakPluginError) {
+            self.init([BroadpeakEventDataKeys.error: error.asNSError,
+                       BroadpeakEventDataKeys.codeKey: error.code,
+                       BroadpeakEventDataKeys.messageKey: error.errorDescription])
         }
     }
     
@@ -29,6 +38,6 @@ import PlayKit
 extension PKEvent {
     /// Broadpeak Event message value, PKEvent Data Accessor
     @objc public var broadpeakEventMessage: String? {
-        return self.data?[BroadpeakEvent.messageKey] as? String
+        return self.data?[BroadpeakEvent.BroadpeakEventDataKeys.messageKey] as? String
     }
 }

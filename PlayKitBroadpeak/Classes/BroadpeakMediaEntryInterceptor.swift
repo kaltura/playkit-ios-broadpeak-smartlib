@@ -77,8 +77,7 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
         
         guard let sources = mediaEntry.sources, !sources.isEmpty else {
             PKLog.error("Missing sources in provided MediaEntry: \(mediaEntry.id)")
-            let error = BroadpeakPluginError.invalidMediaEntry
-            self.messageBus?.post(PluginEvent.Error(nsError: error.asNSError))
+            self.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.invalidMediaEntry))
             completion()
             return
         }
@@ -98,8 +97,7 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
                 } else {
                     DispatchQueue.main.async {
                         PKLog.error("Missed MediaEntry source.contentUrl or SmartLib stream URL is incorrect")
-                        let error = BroadpeakPluginError.unknown
-                        self?.messageBus?.post(PluginEvent.Error(nsError: error.asNSError))
+                        self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.unknown))
                     }
                 }
             }
