@@ -22,8 +22,7 @@ pod 'PlayKitBroadpeak'
 pod 'SmartLib-v3/Generic', '03.02.00.3318'
 ```
 Also nees to add folloving to your Podfile:
-```
-ruby
+```ruby
 load 'plugin-credentials.rb'
 # Broadpeak private Cocoapods sources
 source "https://#{@@broadpeak_platform_login}:#{@@broadpeak_platform_password}@delivery-platform.broadpeak.tv/ios/broadpeak/specs.git"
@@ -38,7 +37,7 @@ https://delivery-platform.broadpeak.tv/docs/?solution=ios-generic
 https://delivery-platform.broadpeak.tv/docs/?solution=tvos-generic 
 
 Once you setup everything run command
-```
+```ruby
 pod install
 ```
 
@@ -51,24 +50,21 @@ Follow the steps of how to add Broadpeak private repo to CocoaPods on your Mac.
 ## Usage
 ### In the AppDelegate:
 
-```
-swift
+```swift
 import PlayKit
 import PlayKitBroadpeak
 ```
 in the ```application(_:didFinishLaunchingWithOptions:)``` needs to add registration plugin to PlayKit manager:
-```
-swift
+```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-    PlayKitManager.shared.registerPlugin(BroadpeakMediaEntryInterceptor.self)
-    return true
+// Override point for customization after application launch.
+PlayKitManager.shared.registerPlugin(BroadpeakMediaEntryInterceptor.self)
+return true
 }
 ```
 ### Next step, you have to create plugin config and add it to player:
 Create plugin config, parameters can be different that shown on example, it depends on your integration with Broadpeak.
-```
-swift
+```swift
 let bpConfig = BroadpeakConfig()
 bpConfig.analyticsAddress = ""
 bpConfig.nanoCDNHost = ""
@@ -84,19 +80,17 @@ Since iOS 14, the system requires a specific permission to allow the nanoCDN dis
 #### Make your declaration
 [Bonjour services](https://developer.apple.com/documentation/bundleresources/information_property_list/nsbonjourservices)
 Declare the nanoCDN service name “_nanocdn._tcp” in your app’s Info.plist.
-```
-xml
+```xml
 <key>NSBonjourServices</key>
 <array>
-    <string>_nanocdn._tcp</string>
+<string>_nanocdn._tcp</string>
 </array>
 ```
 
 #### Provide context
 [Privacy - Local Network Usage Description](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocalnetworkusagedescription)
 After declaring this service, you also need to provide a reason string, which provides context to someone when your app attempts to access a local network. Make sure this text clearly explains what your app is doing with the information it discovers from the local network and how receiving this data enables a necessary experience in your app.
-```
-xml
+```xml
 <key>NSLocalNetworkUsageDescription</key>
 <string>Description example</string>
 ```
