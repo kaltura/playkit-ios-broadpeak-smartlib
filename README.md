@@ -55,18 +55,34 @@ PlayKitManager.shared.registerPlugin(BroadpeakMediaEntryInterceptor.self)
 return true
 }
 ```
-### Next step, you have to create plugin config and add it to player:
+### Create plugin config and add it to player:
 Create plugin config parameters can be different than shown on example, it depends on your integration with Broadpeak.
 ```swift
+import PlayKit
+import KalturaPlayer
+import PlayKitBroadpeak
+```
+
+```swift
+var kalturaOTTPlayer: KalturaOTTPlayer
+
 let bpConfig = BroadpeakConfig()
 bpConfig.analyticsAddress = ""
 bpConfig.nanoCDNHost = ""
 bpConfig.broadpeakDomainNames = "*"
 
-// Add PluginConfig to player PlayKitManager
-let pluginConfig = PluginConfig(config: [BroadpeakMediaEntryInterceptor.pluginName: bpConfig]
-let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+// Add PluginConfig to KalturaPlayer
+let playerOptions = PlayerOptions()
+playerOptions.pluginConfig = PluginConfig(config: [BroadpeakMediaEntryInterceptor.pluginName: bpConfig])
+        
+kalturaOTTPlayer = KalturaOTTPlayer(options: playerOptions)
+
 ```
+It is possible to update player with new options if needed.
+```swift
+kalturaOTTPlayer.updatePlayerOptions(playerOptions)
+```
+
 
 ### iOS 14 and local network privacy:
 Since iOS 14, the system requires a specific permission to allow the nanoCDN discovery used by SmartLib.
@@ -95,7 +111,17 @@ After declaring this service, you also need to provide a reason string, which pr
 
 ## Errors handling
 
+On the ```kalturaOTTPlayer``` object you have to subscribe to an event ```BroadpeakEvent.error``` to recieve errors rised by plugin.
 
+```swift
+kalturaOTTPlayer.addObserver(self, events: [BroadpeakEvent.error]) { event in
+            // Handle Broadpeak SmartLib error here.
+            if let error = event.error {
+                // error here is NSError
+                print(error.localizedDescription)
+            }
+        }
+```
 
 ## License and Copyright Information
 
