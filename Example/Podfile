@@ -6,17 +6,13 @@ source "https://#{@@broadpeak_platform_login}:#{@@broadpeak_platform_password}@d
 # Cocoapods default sources
 source 'https://github.com/CocoaPods/Specs.git'
 
-use_frameworks!
-
 target 'playkit-ios-broadpeak_Example' do
-  
+  use_frameworks!
   
   pod 'PlayKitBroadpeak', :path => '../'
   pod 'SmartLib-v3/Generic', '03.02.00.3318'
-  
   pod 'KalturaPlayer', :git => 'https://github.com/chausov/kaltura-player-ios.git', :branch => 'interceptors_develop'
   #pod 'KalturaPlayer', :path => '../../kaltura-player-ios'
-  
   pod 'PlayKit' , :git => 'https://github.com/chausov/playkit-ios', :branch => 'interceptors_develop'
   #pod 'PlayKit', :path => '../../playkit-ios'
   
