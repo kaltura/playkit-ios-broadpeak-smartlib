@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import PlayKit
+import KalturaPlayer
+import PlayKitBroadpeak
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        PlayKitManager.shared.registerPlugin(BroadpeakMediaEntryInterceptor.self)
+        
+        KalturaOTTPlayer.setup(partnerId: 3009,
+                               serverURL: "https://rest-us.ott.kaltura.com/v4_5/api_v3/")
         return true
     }
 
