@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		90048F2D25765C8F00EBB35D /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90048F2C25765C8F00EBB35D /* PlayerViewController.swift */; };
 		BC5883BED2593FFF7074B0F5 /* Pods_playkit_ios_broadpeak_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C026DB5B96E3018497B3EA /* Pods_playkit_ios_broadpeak_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		62B74917A027164988F92D91 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Example.debug.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6A8769C13D27CE8C4775D471 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8D70AFC4D971DBC812B7DC21 /* Pods_playkit_ios_broadpeak_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90048F2C25765C8F00EBB35D /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		C3C026DB5B96E3018497B3EA /* Pods_playkit_ios_broadpeak_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAA730CFB2D12AE0442762B /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				90048F2C25765C8F00EBB35D /* PlayerViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -284,9 +287,12 @@
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitBroadpeak/PlayKitBroadpeak.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitKava/PlayKitKava.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitProviders/PlayKitProviders.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${PODS_ROOT}/SmartLib-v3/Pod/SmartLib.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -296,9 +302,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitBroadpeak.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitKava.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitProviders.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SmartLib.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +346,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				90048F2D25765C8F00EBB35D /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
