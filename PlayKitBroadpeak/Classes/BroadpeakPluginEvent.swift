@@ -19,6 +19,8 @@ import PlayKit
         static let error = "error"
     }
     
+    @objc public static let allEventTypes: [BroadpeakEvent.Type] = [error]
+    
     @objc public static let error: BroadpeakEvent.Type = BroadpeakEvent.Error.self
     
     class Error: BroadpeakEvent {
