@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		234F023B1BC942CB73BAC2DF /* Pods_playkit_ios_broadpeak_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D70AFC4D971DBC812B7DC21 /* Pods_playkit_ios_broadpeak_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -15,7 +14,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		90048F2D25765C8F00EBB35D /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90048F2C25765C8F00EBB35D /* PlayerViewController.swift */; };
-		BC5883BED2593FFF7074B0F5 /* Pods_playkit_ios_broadpeak_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C026DB5B96E3018497B3EA /* Pods_playkit_ios_broadpeak_Example.framework */; };
+		CD350E3C23D3BDCC3F2EE50F /* Pods_playkit_ios_broadpeak_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2265562E98B0A0D533823DE /* Pods_playkit_ios_broadpeak_Example.framework */; };
+		F8BBFE59CD8BCAA26EB55143 /* Pods_playkit_ios_broadpeak_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A6A6F855581AE22AC6F528 /* Pods_playkit_ios_broadpeak_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58EC19CFD5B6052DB1C58686 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Example.debug.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* playkit-ios-broadpeak_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "playkit-ios-broadpeak_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,13 +40,12 @@
 		607FACE51AFB9204008FA782 /* playkit-ios-broadpeak_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "playkit-ios-broadpeak_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		62376D90A5A442E6F41B8047 /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Example.release.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.release.xcconfig"; sourceTree = "<group>"; };
-		62B74917A027164988F92D91 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Example.debug.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		6A8769C13D27CE8C4775D471 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8D70AFC4D971DBC812B7DC21 /* Pods_playkit_ios_broadpeak_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90048F2C25765C8F00EBB35D /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
-		C3C026DB5B96E3018497B3EA /* Pods_playkit_ios_broadpeak_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCAA730CFB2D12AE0442762B /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9138D93162466E15F880D097 /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0A6A6F855581AE22AC6F528 /* Pods_playkit_ios_broadpeak_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A8CE8CDF2519DF9E8A8E96 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		EA0977C22E8E5FF6C627218E /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Example.release.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F2265562E98B0A0D533823DE /* Pods_playkit_ios_broadpeak_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC5883BED2593FFF7074B0F5 /* Pods_playkit_ios_broadpeak_Example.framework in Frameworks */,
+				CD350E3C23D3BDCC3F2EE50F /* Pods_playkit_ios_broadpeak_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				234F023B1BC942CB73BAC2DF /* Pods_playkit_ios_broadpeak_Tests.framework in Frameworks */,
+				F8BBFE59CD8BCAA26EB55143 /* Pods_playkit_ios_broadpeak_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +75,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				FE0AEC577E26C56DA90636AD /* Pods */,
-				713C08FBB44D759A4ED73CF8 /* Frameworks */,
+				AF766A878EBBA4122DAB01C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,11 +128,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		713C08FBB44D759A4ED73CF8 /* Frameworks */ = {
+		AF766A878EBBA4122DAB01C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C3C026DB5B96E3018497B3EA /* Pods_playkit_ios_broadpeak_Example.framework */,
-				8D70AFC4D971DBC812B7DC21 /* Pods_playkit_ios_broadpeak_Tests.framework */,
+				F2265562E98B0A0D533823DE /* Pods_playkit_ios_broadpeak_Example.framework */,
+				B0A6A6F855581AE22AC6F528 /* Pods_playkit_ios_broadpeak_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		FE0AEC577E26C56DA90636AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				62B74917A027164988F92D91 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */,
-				62376D90A5A442E6F41B8047 /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */,
-				FCAA730CFB2D12AE0442762B /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */,
-				6A8769C13D27CE8C4775D471 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */,
+				58EC19CFD5B6052DB1C58686 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */,
+				EA0977C22E8E5FF6C627218E /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */,
+				9138D93162466E15F880D097 /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */,
+				B7A8CE8CDF2519DF9E8A8E96 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,11 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "playkit-ios-broadpeak_Example" */;
 			buildPhases = (
-				C12FD2ECA3340F7BC12C24DA /* [CP] Check Pods Manifest.lock */,
+				D4F962825DFCFE959E2A63B1 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				809B110F32EC61C628631F4E /* [CP] Embed Pods Frameworks */,
+				568601D4F11A37EC7AF483DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,7 +174,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "playkit-ios-broadpeak_Tests" */;
 			buildPhases = (
-				0FE4D6812F041540A2AFAC98 /* [CP] Check Pods Manifest.lock */,
+				0FDB301646BDA82611B62F71 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -253,7 +253,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0FE4D6812F041540A2AFAC98 /* [CP] Check Pods Manifest.lock */ = {
+		0FDB301646BDA82611B62F71 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,7 +275,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		809B110F32EC61C628631F4E /* [CP] Embed Pods Frameworks */ = {
+		568601D4F11A37EC7AF483DF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,7 +315,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C12FD2ECA3340F7BC12C24DA /* [CP] Check Pods Manifest.lock */ = {
+		D4F962825DFCFE959E2A63B1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -489,7 +489,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62B74917A027164988F92D91 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */;
+			baseConfigurationReference = 58EC19CFD5B6052DB1C58686 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
@@ -500,12 +500,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62376D90A5A442E6F41B8047 /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */;
+			baseConfigurationReference = EA0977C22E8E5FF6C627218E /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
@@ -516,12 +517,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCAA730CFB2D12AE0442762B /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */;
+			baseConfigurationReference = 9138D93162466E15F880D097 /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -544,7 +546,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A8769C13D27CE8C4775D471 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */;
+			baseConfigurationReference = B7A8CE8CDF2519DF9E8A8E96 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				FRAMEWORK_SEARCH_PATHS = (
