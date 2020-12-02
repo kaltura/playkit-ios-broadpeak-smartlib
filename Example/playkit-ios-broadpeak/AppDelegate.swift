@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         PlayKitManager.shared.registerPlugin(BroadpeakMediaEntryInterceptor.self)
         #error("Change partnerId and serverURL to relevant values")
-        KalturaOTTPlayer.setup(partnerId: 3009,
-                               serverURL: "https://rest-us.ott.kaltura.com/v4_5/api_v3/")
+        KalturaOTTPlayer.setup(partnerId: 3200,
+                               serverURL: "https://api.frp1.ott.kaltura.com/api_v3/")
         return true
     }
 

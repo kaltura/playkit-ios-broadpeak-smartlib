@@ -14,16 +14,17 @@ import PlayKitBroadpeak
 class PlayerViewController: UIViewController {
     
     #error("Please set playerKS, urlType, streamerType, assetId, mediaFormats, networkProtocol to relevant values.")
-    let playerKS: String? = nil
+    let playerKS: String? = ""
     let autoPlay: Bool = true
-    let preload: Bool = true
+    let preload: Bool = false
     
-    let urlType: String? = nil
-    let streamerType: String? = nil
+    let urlType: String? = "DIRECT"
+    let streamerType: String? = "applehttp"
     let assetId: String = ""
-    let mediaFormats: [String] = ["Mobile_Main", "HLS_FP"]
-    let networkProtocol: String = "http"
-
+    let mediaFormats: [String] = ["HLS_FP"]
+    let networkProtocol: String = "https"
+    let fileIds: [String]? = [""]
+    
     @IBOutlet weak var kalturaPlayerView: KalturaPlayerView!
     
     var kalturaOTTPlayer: KalturaOTTPlayer!
@@ -91,6 +92,7 @@ class PlayerViewController: UIViewController {
         mediaOptions.networkProtocol = networkProtocol
         mediaOptions.urlType = urlType
         mediaOptions.streamerType = streamerType
+        mediaOptions.fileIds = fileIds
         
         return mediaOptions
     }
