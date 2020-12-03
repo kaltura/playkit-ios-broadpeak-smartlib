@@ -18,6 +18,7 @@ import KalturaPlayer
         return "BroadpeakMediaEntryInterceptor/Plugin"
     }
     
+    var streamingSession: StreamingSession
     var config: BroadpeakConfig
     
     var completionHandler: (() -> Void)?
@@ -30,11 +31,13 @@ import KalturaPlayer
         
         self.config = config
         
-        try super.init(player: player, pluginConfig: pluginConfig, messageBus: messageBus)
-        
         SmartLib.initSmartLib(self.config.analyticsAddress,
                               nanoCDNHost: self.config.nanoCDNHost,
                               broadpeakDomainNames: self.config.broadpeakDomainNames)
+        
+        streamingSession = SmartLib.createStreamingSession()
+        
+        try super.init(player: player, pluginConfig: pluginConfig, messageBus: messageBus)
     }
     
     @objc open override func onUpdateMedia(mediaConfig: MediaConfig) {
@@ -53,16 +56,20 @@ import KalturaPlayer
         
         self.config = config
         
+        streamingSession.stop()
         SmartLib.stopStreamingSession()
         SmartLib.release()
         
         SmartLib.initSmartLib(self.config.analyticsAddress,
                               nanoCDNHost: self.config.nanoCDNHost,
                               broadpeakDomainNames: self.config.broadpeakDomainNames)
+        
+        streamingSession = SmartLib.createStreamingSession()
     }
     
     @objc open override func destroy() {
         completionHandler = nil
+        streamingSession.stop()
         SmartLib.stopStreamingSession()
         SmartLib.release()
         
@@ -89,11 +96,21 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
             for source in sources {
                 
                 if let contentURL = source.contentUrl,
-                   let streamUrl = SmartLib.getURL(contentURL.absoluteString),
-                   !streamUrl.isEmpty,
-                   let url = URL(string: streamUrl) {
+                   let result = self?.streamingSession.getURL(contentURL.absoluteString) {
                     
-                    source.contentUrl = url
+                    DispatchQueue.main.async {
+                        if result.isError() {
+                            PKLog.error("Broadpeak internal error occurred")
+                            self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibError(Int(result.getErrorCode()), result.getErrorMessage())))
+                        } else {
+                            if let url = URL(string: result.getURL()) {
+                                source.contentUrl = url
+                            } else {
+                                PKLog.error("SmartLib Streaming Session returned incorrect URL")
+                                self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibBadUrl))
+                            }
+                        }
+                    }
                 } else {
                     DispatchQueue.main.async {
                         PKLog.error("Missed MediaEntry source.contentUrl or SmartLib stream URL is incorrect")

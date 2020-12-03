@@ -13,7 +13,7 @@ import PlayKit
 
 enum BroadpeakPluginError: PKError {
     
-    case smartLibError
+    case smartLibError(Int, String)
     case smartLibBadUrl
     case invalidMediaEntry
     case unknown
@@ -31,7 +31,7 @@ enum BroadpeakPluginError: PKError {
     
     var errorDescription: String {
         switch self {
-        case .smartLibError: return "Something wrong with Broadpeak interaction."
+        case .smartLibError(_, let errorMessage): return errorMessage
         case .smartLibBadUrl: return "SmartLib Stream URL is empty."
         case .invalidMediaEntry: return "Provided MediaEntry can not be modified. Check MediaEntry Sources."
         case .unknown: return "BroadpeakPlugin unknown error."
@@ -39,7 +39,11 @@ enum BroadpeakPluginError: PKError {
     }
     
     var userInfo: [String : Any] {
-        return [:]
+        
+        switch self {
+        case .smartLibError(let errorCode, let errorMessage): return ["BPErrorCode": errorCode, "BPErrorMessage": errorMessage]
+        default: return [:]
+        }
     }
     
 }
