@@ -53,7 +53,7 @@ extension PKErrorDomain {
 }
 
 extension PKErrorCode {
-    @objc(UnknownBroadpeakError) public static let unknownBroadpeakError = 10000
+    @objc(BroadpeakUnknownError) public static let broadpeakUnknownError = 10000
     @objc(BroadpeakPluginInvalidMediaEntry) public static let broadpeakPluginInvalidMediaEntry = 10001
     @objc(BroadpeakPluginInvalidSmartLibEntry) public static let broadpeakPluginInvalidSmartLibEntry = 10002
     @objc(BroadpeakPluginInvalidStreamURL) public static let broadpeakPluginInvalidStreamURL = 10003
