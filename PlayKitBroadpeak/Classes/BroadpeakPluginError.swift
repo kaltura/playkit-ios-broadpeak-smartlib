@@ -25,7 +25,7 @@ enum BroadpeakPluginError: PKError {
         case .smartLibError: return PKErrorCode.broadpeakPluginInvalidSmartLibEntry
         case .smartLibBadUrl: return PKErrorCode.broadpeakPluginInvalidStreamURL
         case .invalidMediaEntry: return PKErrorCode.broadpeakPluginInvalidMediaEntry
-        case .unknown: return PKErrorCode.unknownBroadpeakError
+        case .unknown: return PKErrorCode.broadpeakUnknownError
         }
     }
     
@@ -38,7 +38,7 @@ enum BroadpeakPluginError: PKError {
         }
     }
     
-    var userInfo: [String : Any] {
+    var userInfo: [String: Any] {
         
         switch self {
         case .smartLibError(let errorCode, let errorMessage): return ["BPErrorCode": errorCode, "BPErrorMessage": errorMessage]
