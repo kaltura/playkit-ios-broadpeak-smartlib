@@ -1,0 +1,20 @@
+language: swift
+osx_image: xcode10.2
+# cache: cocoapods
+# podfile: Example/Podfile
+before_install:
+  - gem install cocoapods xcpretty
+  - pod repo update
+script:
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/playkit-ios-broadpeak.xcworkspace -scheme playkit-ios-broadpeak-Example -sdk iphonesimulator10.3.1 ONLY_ACTIVE_ARCH=NO | xcpretty
+- pod lib lint
+notifications:
+  email:
+    recipients:
+      - noam.tamim@kaltura.com
+      - nilit.danan@kaltura.com
+      - gilad.nadav@kaltura.com
+      - sergey.chausov@kaltura.com
+      - israel.berezin@kaltura.com
+    on_success: change
+    on_failure: always

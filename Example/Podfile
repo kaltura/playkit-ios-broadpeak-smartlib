@@ -1,0 +1,23 @@
+load 'plugin-credentials.rb'
+
+# Broadpeak private Cocoapods sources
+source "https://#{@@broadpeak_platform_login}:#{@@broadpeak_platform_password}@delivery-platform.broadpeak.tv/ios/broadpeak/specs.git"
+
+# Cocoapods default sources
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'playkit-ios-broadpeak_Example' do
+  use_frameworks!
+  
+  pod 'PlayKitBroadpeak', :path => '../'
+  pod 'SmartLib-v3/Generic', '03.02.00.3318'
+  pod 'KalturaPlayer/OTT', :git => 'https://github.com/kaltura/kaltura-player-ios.git', :branch => 'develop'
+  #pod 'KalturaPlayer', :path => '../../kaltura-player-ios'
+  pod 'PlayKit' , :git => 'https://github.com/kaltura/playkit-ios', :branch => 'develop'
+  #pod 'PlayKit', :path => '../../playkit-ios'
+  
+  target 'playkit-ios-broadpeak_Tests' do
+    inherit! :search_paths
+    
+  end
+end

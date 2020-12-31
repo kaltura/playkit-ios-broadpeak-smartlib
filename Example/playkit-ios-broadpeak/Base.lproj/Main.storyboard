@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FNY-AZ-JBv">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ywP-Po-MaQ">
+            <objects>
+                <navigationController id="FNY-AZ-JBv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xMb-s2-ouo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="aPT-cf-Gyh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KEn-GG-yoB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-666" y="125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="playkit_ios_broadpeak_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Seb-FD-fdw">
+                                <rect key="frame" x="152.5" y="318.5" width="70" height="30"/>
+                                <state key="normal" title="Play video"/>
+                                <connections>
+                                    <segue destination="5Tw-pi-xQ9" kind="show" id="L95-yb-5cE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Seb-FD-fdw" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="W84-Bz-Xvl"/>
+                            <constraint firstItem="Seb-FD-fdw" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Wec-hq-xWj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="erF-K0-7nh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="125"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="C5P-lJ-g7L">
+            <objects>
+                <viewController id="5Tw-pi-xQ9" customClass="PlayerViewController" customModule="playkit_ios_broadpeak_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fAO-Ip-VXf"/>
+                        <viewControllerLayoutGuide type="bottom" id="JZW-F6-3am"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wvs-zt-V35">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbD-6d-feJ" customClass="KalturaPlayerView" customModule="KalturaPlayer">
+                                <rect key="frame" x="10" y="124" width="355" height="168"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XbD-6d-feJ" secondAttribute="height" multiplier="19:9" id="i9b-g6-j2M"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XbD-6d-feJ" firstAttribute="top" secondItem="fAO-Ip-VXf" secondAttribute="bottom" constant="80" id="gtw-uV-S6i"/>
+                            <constraint firstItem="XbD-6d-feJ" firstAttribute="leading" secondItem="wvs-zt-V35" secondAttribute="leading" constant="10" id="lK2-fy-04h"/>
+                            <constraint firstAttribute="trailing" secondItem="XbD-6d-feJ" secondAttribute="trailing" constant="10" id="n2L-If-2z7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="76C-yD-88d"/>
+                    <connections>
+                        <outlet property="kalturaPlayerView" destination="XbD-6d-feJ" id="tg5-47-DZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yo-cL-GID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
