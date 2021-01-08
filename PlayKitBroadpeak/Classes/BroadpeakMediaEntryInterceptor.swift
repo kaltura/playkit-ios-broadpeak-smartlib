@@ -9,8 +9,13 @@
 // ===================================================================================================
 
 import PlayKit
-import SmartLib
 import KalturaPlayer
+
+#if os(iOS)
+    import SmartLib
+#elseif os(tvOS)
+    import SmartLib_tvOS
+#endif
 
 @objc public class BroadpeakMediaEntryInterceptor: BasePlugin {
     

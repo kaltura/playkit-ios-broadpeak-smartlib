@@ -13,6 +13,8 @@ Pod::Spec.new do |s|
   s.author           = { 'Kaltura' => 'community@kaltura.com' }
   s.source           = { :git => 'https://github.com/kaltura/playkit-ios-broadpeak-smartlib.git', :tag => s.version.to_s }
   
+  s.swift_version     = '5.0'
+  
   s.ios.deployment_target = '10.0'
   s.tvos.deployment_target = '10.0'
   
@@ -21,6 +23,6 @@ Pod::Spec.new do |s|
   s.dependency 'PlayKit/AnalyticsCommon', '~> 3.19'
   s.dependency 'KalturaPlayer/Interceptor'
   s.ios.dependency 'SmartLib-v3/Generic', '03.02.00.3318'
-  s.tvos.dependency 'SmartLib-v3/Generic+tvOS', '03.02.00.3318'
+  s.tvos.dependency 'SmartLib-v3/Generic+tvOS', '03.02.01.3371'
   
 end
