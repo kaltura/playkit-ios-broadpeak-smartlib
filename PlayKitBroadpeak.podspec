@@ -13,6 +13,8 @@ Pod::Spec.new do |s|
   s.author           = { 'Kaltura' => 'community@kaltura.com' }
   s.source           = { :git => 'https://github.com/kaltura/playkit-ios-broadpeak-smartlib.git', :tag => s.version.to_s }
   
+  s.swift_version     = '5.0'
+  
   s.ios.deployment_target = '10.0'
   s.tvos.deployment_target = '10.0'
   
@@ -20,7 +22,13 @@ Pod::Spec.new do |s|
   
   s.dependency 'PlayKit/AnalyticsCommon', '~> 3.19'
   s.dependency 'KalturaPlayer/Interceptor'
-  s.ios.dependency 'SmartLib-v3/Generic', '03.02.00.3318'
-  s.tvos.dependency 'SmartLib-v3/Generic+tvOS', '03.02.00.3318'
+  s.ios.dependency 'SmartLib-v3/Generic', '03.02.01.3373'
+  s.tvos.dependency 'SmartLib-v3/Generic+tvOS', '03.02.01.3373'
   
+  s.xcconfig = {
+### The following is required for Xcode 12 (https://stackoverflow.com/questions/63607158/xcode-12-building-for-ios-simulator-but-linking-in-object-file-built-for-ios)
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64'
+  }
+
 end

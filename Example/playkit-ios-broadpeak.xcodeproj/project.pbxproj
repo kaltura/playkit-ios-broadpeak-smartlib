@@ -42,8 +42,11 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		90048F2C25765C8F00EBB35D /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		9138D93162466E15F880D097 /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1CDFE946FC24051DB3813C9 /* Pods_playkit_tvos_broadpeak_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_tvos_broadpeak_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A6A6F855581AE22AC6F528 /* Pods_playkit_ios_broadpeak_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A8CE8CDF2519DF9E8A8E96 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C0AEE0F5A94F87E1B6E27062 /* Pods-playkit-tvos-broadpeak_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-tvos-broadpeak_Example.debug.xcconfig"; path = "Target Support Files/Pods-playkit-tvos-broadpeak_Example/Pods-playkit-tvos-broadpeak_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E0E5807C353CCB5AD3E81778 /* Pods-playkit-tvos-broadpeak_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-tvos-broadpeak_Example.release.xcconfig"; path = "Target Support Files/Pods-playkit-tvos-broadpeak_Example/Pods-playkit-tvos-broadpeak_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EA0977C22E8E5FF6C627218E /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Example.release.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F2265562E98B0A0D533823DE /* Pods_playkit_ios_broadpeak_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,6 +136,7 @@
 			children = (
 				F2265562E98B0A0D533823DE /* Pods_playkit_ios_broadpeak_Example.framework */,
 				B0A6A6F855581AE22AC6F528 /* Pods_playkit_ios_broadpeak_Tests.framework */,
+				A1CDFE946FC24051DB3813C9 /* Pods_playkit_tvos_broadpeak_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,6 +148,8 @@
 				EA0977C22E8E5FF6C627218E /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */,
 				9138D93162466E15F880D097 /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */,
 				B7A8CE8CDF2519DF9E8A8E96 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */,
+				C0AEE0F5A94F87E1B6E27062 /* Pods-playkit-tvos-broadpeak_Example.debug.xcconfig */,
+				E0E5807C353CCB5AD3E81778 /* Pods-playkit-tvos-broadpeak_Example.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -195,7 +201,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
