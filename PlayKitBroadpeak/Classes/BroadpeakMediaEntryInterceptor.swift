@@ -23,7 +23,7 @@ import KalturaPlayer
         return "BroadpeakMediaEntryInterceptor/Plugin"
     }
     
-    var streamingSession: StreamingSession
+    var streamingSession: StreamingSession?
     var config: BroadpeakConfig
     
     var completionHandler: (() -> Void)?
@@ -40,9 +40,17 @@ import KalturaPlayer
                               nanoCDNHost: self.config.nanoCDNHost,
                               broadpeakDomainNames: self.config.broadpeakDomainNames)
         
-        streamingSession = SmartLib.createStreamingSession()
-        
         try super.init(player: player, pluginConfig: pluginConfig, messageBus: messageBus)
+        
+        messageBus.addObserver(self, events: [PlayerEvent.error], block: { [weak self] event in
+            guard let self = self else { return }
+            
+            switch event {
+            case is PlayerEvent.Error:
+                self.streamingSession?.stop()
+            default: break
+            }
+        })
     }
     
     @objc open override func onUpdateMedia(mediaConfig: MediaConfig) {
@@ -59,23 +67,24 @@ import KalturaPlayer
             return
         }
         
-        self.config = config
-        
-        streamingSession.stop()
-        SmartLib.stopStreamingSession()
-        SmartLib.release()
-        
-        SmartLib.initSmartLib(self.config.analyticsAddress,
-                              nanoCDNHost: self.config.nanoCDNHost,
-                              broadpeakDomainNames: self.config.broadpeakDomainNames)
-        
-        streamingSession = SmartLib.createStreamingSession()
+        if !self.config.isEqual(config) {
+            
+            self.config = config
+            
+            streamingSession?.stop()
+            SmartLib.release()
+            
+            SmartLib.initSmartLib(self.config.analyticsAddress,
+                                  nanoCDNHost: self.config.nanoCDNHost,
+                                  broadpeakDomainNames: self.config.broadpeakDomainNames)
+        }
     }
     
     @objc open override func destroy() {
+        self.messageBus?.removeObserver(self, events: [PlayerEvent.error])
+        
         completionHandler = nil
-        streamingSession.stop()
-        SmartLib.stopStreamingSession()
+        streamingSession?.stop()
         SmartLib.release()
         
         super.destroy()
@@ -96,31 +105,46 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
         
         completionHandler = completion
         
+        if streamingSession != nil {
+            streamingSession?.stop()
+        }
+        streamingSession = SmartLib.createStreamingSession()
+        
+        // Attach player (only iOS supported for now)
+        #if os(iOS)
+        if let player = self.player {
+            self.streamingSession?.attachPlayer(player)
+        }
+        #elseif os(tvOS)
+        #endif
+        
         DispatchQueue.global(qos: .default).async { [weak self] in
             
-            for source in sources {
+            if let source = sources.first,
+               let contentURL = source.contentUrl,
+               let result = self?.streamingSession?.getURL(contentURL.absoluteString) {
                 
-                if let contentURL = source.contentUrl,
-                   let result = self?.streamingSession.getURL(contentURL.absoluteString) {
+                DispatchQueue.main.async {
                     
-                    DispatchQueue.main.async {
-                        if result.isError() {
-                            PKLog.error("Broadpeak internal error occurred")
-                            self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibError(Int(result.getErrorCode()), result.getErrorMessage())))
+                    if result.isError() {
+                        self?.streamingSession?.stop(result.getErrorCode())
+                        PKLog.error("SmartLib internal error occurred")
+                        self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibError(Int(result.getErrorCode()), result.getErrorMessage())))
+                    } else {
+                        if let url = URL(string: result.getURL()) {
+                            source.contentUrl = url
                         } else {
-                            if let url = URL(string: result.getURL()) {
-                                source.contentUrl = url
-                            } else {
-                                PKLog.error("SmartLib Streaming Session returned incorrect URL")
-                                self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibBadUrl))
-                            }
+                            self?.streamingSession?.stop()
+                            PKLog.error("SmartLib Streaming Session returned incorrect URL")
+                            self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibBadUrl))
                         }
                     }
-                } else {
-                    DispatchQueue.main.async {
-                        PKLog.error("Missed MediaEntry source.contentUrl or SmartLib stream URL is incorrect")
-                        self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.unknown))
-                    }
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self?.streamingSession?.stop()
+                    PKLog.error("Missed MediaEntry source.contentUrl or SmartLib stream URL is incorrect")
+                    self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.unknown))
                 }
             }
             

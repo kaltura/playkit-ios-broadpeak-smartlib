@@ -35,3 +35,18 @@ import Foundation
     }
     
 }
+
+extension BroadpeakConfig {
+    
+    @objc public override func isEqual(_ object: Any?) -> Bool {
+        
+        if let object = object as? BroadpeakConfig {
+            return self.analyticsAddress == object.analyticsAddress
+                && self.nanoCDNHost == object.nanoCDNHost
+                && self.broadpeakDomainNames == object.broadpeakDomainNames
+        }
+        
+        return false
+    }
+    
+}
