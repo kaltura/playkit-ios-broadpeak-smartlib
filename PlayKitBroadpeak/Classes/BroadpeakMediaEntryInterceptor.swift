@@ -123,7 +123,7 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
                 DispatchQueue.main.async {
                     
                     if result.isError() {
-                        self?.streamingSession?.stop(result.getErrorCode())
+                        self?.streamingSession?.stop()
                         PKLog.error("SmartLib internal error occurred")
                         self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibError(Int(result.getErrorCode()), result.getErrorMessage())))
                     } else {
