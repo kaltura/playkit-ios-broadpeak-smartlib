@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/PlayKitBroadpeak.svg?style=flat)](https://cocoapods.org/pods/PlayKitBroadpeak)
 [![License](https://img.shields.io/cocoapods/l/PlayKitBroadpeak.svg?style=flat)](https://cocoapods.org/pods/PlayKitBroadpeak)
 [![Platform](https://img.shields.io/cocoapods/p/PlayKitBroadpeak.svg?style=flat)](https://cocoapods.org/pods/PlayKitBroadpeak)
+[![CI Status](https://travis-ci.com/kaltura/playkit-ios-broadpeak-smartlib.svg?branch=develop)](https://travis-ci.com/github/kaltura/playkit-ios-broadpeak-smartlib)
 
 Kaltura Player iOS plugin for Broadpeak SmartLib
 
