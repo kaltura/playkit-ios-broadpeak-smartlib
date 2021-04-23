@@ -111,7 +111,7 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
         streamingSession = SmartLib.createStreamingSession()
         
         if let player = self.player {
-            self.streamingSession?.attachPlayer(player)
+            self.streamingSession?.attachPlayer(player, listener: self.messageBus)
         }
         
         DispatchQueue.global(qos: .default).async { [weak self] in
