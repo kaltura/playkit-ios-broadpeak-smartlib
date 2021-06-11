@@ -106,7 +106,7 @@ class PlayerViewController: UIViewController {
         
         let bpConfig = BroadpeakConfig()
         bpConfig.analyticsAddress = ""
-        bpConfig.nanoCDNHost = "cdnapisec.kaltura.com"
+        bpConfig.nanoCDNHost = ""
         bpConfig.broadpeakDomainNames = "*"
         
         playerOptions.pluginConfig = PluginConfig(config: [BroadpeakMediaEntryInterceptor.pluginName: bpConfig])

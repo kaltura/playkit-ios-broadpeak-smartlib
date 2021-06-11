@@ -69,7 +69,8 @@ var kalturaOTTPlayer: KalturaOTTPlayer
 
 let bpConfig = BroadpeakConfig()
 bpConfig.analyticsAddress = ""
-bpConfig.nanoCDNHost = "cdnapisec.kaltura.com"
+// Set nanoCDNHost only if you are using the Broadpeak nanoCDN device, othervise set an empty string ""
+bpConfig.nanoCDNHost = ""
 bpConfig.broadpeakDomainNames = "*"
 
 // Add PluginConfig to KalturaPlayer
