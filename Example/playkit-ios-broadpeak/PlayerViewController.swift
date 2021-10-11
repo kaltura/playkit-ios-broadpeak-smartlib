@@ -108,6 +108,7 @@ class PlayerViewController: UIViewController {
         bpConfig.analyticsAddress = ""
         bpConfig.nanoCDNHost = ""
         bpConfig.broadpeakDomainNames = "*"
+        bpConfig.uuid = UIDevice.current.identifierForVendor?.uuidString ?? "" // Can be any unique id
         
         playerOptions.pluginConfig = PluginConfig(config: [BroadpeakMediaEntryInterceptor.pluginName: bpConfig])
         

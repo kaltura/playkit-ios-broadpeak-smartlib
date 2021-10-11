@@ -24,7 +24,17 @@ import KalturaPlayer
     }
     
     var streamingSession: StreamingSession?
-    var config: BroadpeakConfig
+    var config: BroadpeakConfig {
+        didSet {
+            SmartLib.initSmartLib(config.analyticsAddress,
+                                  nanoCDNHost: config.nanoCDNHost,
+                                  broadpeakDomainNames: config.broadpeakDomainNames)
+            
+            if !config.uuid.isEmpty {
+                SmartLib.setUUID(config.uuid)
+            }
+        }
+    }
     
     var completionHandler: (() -> Void)?
     
@@ -35,10 +45,6 @@ import KalturaPlayer
         }
         
         self.config = config
-        
-        SmartLib.initSmartLib(self.config.analyticsAddress,
-                              nanoCDNHost: self.config.nanoCDNHost,
-                              broadpeakDomainNames: self.config.broadpeakDomainNames)
         
         try super.init(player: player, pluginConfig: pluginConfig, messageBus: messageBus)
         
@@ -68,15 +74,9 @@ import KalturaPlayer
         }
         
         if !self.config.isEqual(config) {
-            
-            self.config = config
-            
             streamingSession?.stop()
             SmartLib.release()
-            
-            SmartLib.initSmartLib(self.config.analyticsAddress,
-                                  nanoCDNHost: self.config.nanoCDNHost,
-                                  broadpeakDomainNames: self.config.broadpeakDomainNames)
+            self.config = config
         }
     }
     

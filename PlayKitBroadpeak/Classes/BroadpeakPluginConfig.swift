@@ -15,6 +15,7 @@ import Foundation
     @objc public var analyticsAddress: String = ""
     @objc public var nanoCDNHost: String = ""
     @objc public var broadpeakDomainNames: String = ""
+    @objc public var uuid: String = ""
     
     @discardableResult
     @nonobjc public func set(analyticsAddress: String) -> Self {
@@ -34,6 +35,11 @@ import Foundation
         return self
     }
     
+    @discardableResult
+    @nonobjc public func set(uuid: String) -> Self {
+        self.uuid = uuid
+        return self
+    }
 }
 
 extension BroadpeakConfig {
@@ -44,6 +50,7 @@ extension BroadpeakConfig {
             return self.analyticsAddress == object.analyticsAddress
                 && self.nanoCDNHost == object.nanoCDNHost
                 && self.broadpeakDomainNames == object.broadpeakDomainNames
+                && self.uuid == object.uuid
         }
         
         return false
