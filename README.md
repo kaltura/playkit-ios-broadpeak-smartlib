@@ -26,9 +26,9 @@ load 'plugin-credentials.rb'
 # Broadpeak private Cocoapods sources
 source "https://#{@@broadpeak_platform_login}:#{@@broadpeak_platform_password}@delivery-platform.broadpeak.tv/ios/broadpeak/specs.git"
 ```
-Broadpeak SmartLib dependency hosted in the private repository, that requires authorisation. You have to specify Broadpeak platform credentials in the plugin-credentials.rb file. In the Example folder of Kaltura plugin repository you can find file [Template_plugin-credentials.rb](https://github.com/chausov/playkit-ios-broadpeak-smartlib/blob/development/Example/Template_plugin-credentials.rb) Rename it to plugin-credentials.rb and add it to .gitignore if you don't like to share credentials in your repository. You can follow same implementation like in PlayKitBroadpeak Example.
+Broadpeak SmartLib dependency hosted in the private repository, that requires authorisation. You have to specify Broadpeak platform credentials in the plugin-credentials.rb file. In the Example folder of Kaltura plugin repository you can find file [Template_plugin-credentials.rb](https://github.com/kaltura/playkit-ios-broadpeak-smartlib/blob/develop/Example/Template_plugin-credentials.rb) Rename it to plugin-credentials.rb and add it to .gitignore if you don't like to share credentials in your repository. You can follow same implementation like in PlayKitBroadpeak Example.
 
-[Example of the podfile you can find by following this link](https://github.com/chausov/playkit-ios-broadpeak-smartlib/blob/development/Example/Podfile)  
+[Example of the podfile you can find by following this link](https://github.com/kaltura/playkit-ios-broadpeak-smartlib/blob/develop/Example/Podfile)  
 
 Once you setup everything run command
 ```ruby
@@ -38,8 +38,7 @@ pod install
 #### Original installation guide for iOS and tvOS Broadpeak SmartLib.
 Follow the steps of how to add Broadpeak private repo to CocoaPods on your Mac.  
 
-[iOS Generic](https://delivery-platform.broadpeak.tv/docs/?solution=ios-generic)    
-[tvOS Generic](https://delivery-platform.broadpeak.tv/docs/?solution=tvos-generic)  
+[iOS & tvOS Generic](https://delivery-platform.broadpeak.tv/docs/?solution=ios-tvos-generic)    
 
 ## Usage
 ### In the AppDelegate:
