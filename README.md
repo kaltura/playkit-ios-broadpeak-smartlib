@@ -13,12 +13,12 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-**PlayKitBroadpeak** is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following lines to your Podfile:
+**PlayKitBroadpeak** is not published to main [CocoaPods](https://cocoapods.org) Specs repo but you can mage it via CocoaPods tools. 
+To install it, simply add the following lines to your Podfile:
 
 ```ruby
-pod 'PlayKitBroadpeak'
-pod 'SmartLib-v3/Generic', '03.02.00.3318'
+pod 'PlayKitBroadpeak', :git => 'https://github.com/kaltura/playkit-ios-broadpeak-smartlib', :tag => 'v1.0.1'
+pod 'SmartLib-v3/Generic', '03.02.05.3568'
 ```
 Also nees to add folloving to your Podfile:
 ```ruby
