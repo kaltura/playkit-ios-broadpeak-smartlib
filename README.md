@@ -13,7 +13,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-**PlayKitBroadpeak** is not published to main [CocoaPods](https://cocoapods.org) Specs repo but you can mage it via CocoaPods tools. 
+**PlayKitBroadpeak** is not published to main [CocoaPods](https://cocoapods.org) Specs repo, but you can manage it via CocoaPods tools. 
 To install it, simply add the following lines to your Podfile:
 
 ```ruby
