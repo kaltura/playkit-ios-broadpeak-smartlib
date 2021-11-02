@@ -78,6 +78,7 @@ class PlayerViewController: UIViewController {
         
         kalturaOTTPlayer.removeObserver(self, events: KPPlayerEvent.allEventTypes)
         kalturaOTTPlayer.removeObserver(self, events: BroadpeakEvent.allEventTypes)
+        kalturaOTTPlayer.removeObserver(self, events: InterceptorEvent.allEventTypes)
     }
     
     private func mediaOptions() -> OTTMediaOptions {
@@ -117,6 +118,18 @@ class PlayerViewController: UIViewController {
     
     private func registerPlayerEvents() {
         handleError()
+        
+        kalturaOTTPlayer.addObserver(self, events: [InterceptorEvent.sourceUrlSwitched]) { [weak self] event in
+            
+            if let event = event as? InterceptorEvent.SourceUrlSwitched,
+               let originalUrl = event.originalUrl,
+               let updatedUrl = event.updatedUrl {
+                
+                PKLog.debug("InterceptorEvent.sourceUrlSwitched originalUrl :: \(originalUrl)")
+                PKLog.debug("InterceptorEvent.sourceUrlSwitched updatedUrl:: \(updatedUrl)")
+            }
+        }
+
     }
     
     private func handleError() {
@@ -145,7 +158,5 @@ class PlayerViewController: UIViewController {
                 }
             }
         }
-        
     }
-    
 }
