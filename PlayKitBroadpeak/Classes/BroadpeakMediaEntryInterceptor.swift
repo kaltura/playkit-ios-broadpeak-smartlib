@@ -39,10 +39,11 @@ import KalturaPlayer
         }
         
         self.config = config
-        // DidSet functionss are not called in the initializers.
-        updateSmartLib()
         
         try super.init(player: player, pluginConfig: pluginConfig, messageBus: messageBus)
+        
+        // DidSet functionss are not called in the initializers.
+        updateSmartLib()
         
         messageBus.addObserver(self, events: [PlayerEvent.error], block: { [weak self] event in
             guard let self = self else { return }
