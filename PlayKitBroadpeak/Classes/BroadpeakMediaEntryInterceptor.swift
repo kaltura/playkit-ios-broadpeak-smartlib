@@ -89,7 +89,6 @@ import KalturaPlayer
         
         super.destroy()
     }
-    
 }
 
 extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
@@ -128,6 +127,8 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
                         self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibError(Int(result.getErrorCode()), result.getErrorMessage())))
                     } else {
                         if let url = URL(string: result.getURL()) {
+                            //send SourceUrlSwitched event
+                            self?.messageBus?.post(InterceptorEvent.SourceUrlSwitched(originalUrl: contentURL.absoluteString, updatedUrl: url.absoluteString))
                             source.contentUrl = url
                         } else {
                             self?.streamingSession?.stop()
