@@ -18,7 +18,7 @@ To install it, simply add the following lines to your Podfile:
 
 ```ruby
 pod 'PlayKitBroadpeak', :git => 'https://github.com/kaltura/playkit-ios-broadpeak-smartlib', :tag => 'v1.0.1'
-pod 'SmartLib-v3/Generic', '03.02.05.3568'
+pod 'SmartLib-v3/Generic', '03.02.05.3568' # Make sure this is the latest one!
 ```
 Also nees to add folloving to your Podfile:
 ```ruby
