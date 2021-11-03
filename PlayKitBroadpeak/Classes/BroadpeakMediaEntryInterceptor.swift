@@ -26,13 +26,7 @@ import KalturaPlayer
     var streamingSession: StreamingSession?
     var config: BroadpeakConfig {
         didSet {
-            SmartLib.initSmartLib(config.analyticsAddress,
-                                  nanoCDNHost: config.nanoCDNHost,
-                                  broadpeakDomainNames: config.broadpeakDomainNames)
-            
-            if !config.uuid.isEmpty {
-                SmartLib.setUUID(config.uuid)
-            }
+            updateSmartLib()
         }
     }
     
@@ -45,6 +39,8 @@ import KalturaPlayer
         }
         
         self.config = config
+        // DidSet functionss are not called in the initializers.
+        updateSmartLib()
         
         try super.init(player: player, pluginConfig: pluginConfig, messageBus: messageBus)
         
@@ -150,5 +146,18 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
             }
         }
     }
-    
+}
+
+// MARK: - SmartLib
+
+extension BroadpeakMediaEntryInterceptor {
+    func updateSmartLib() {
+        SmartLib.initSmartLib(config.analyticsAddress,
+                              nanoCDNHost: config.nanoCDNHost,
+                              broadpeakDomainNames: config.broadpeakDomainNames)
+        
+        if !config.uuid.isEmpty {
+            SmartLib.setUUID(config.uuid)
+        }
+    }
 }
