@@ -10,11 +10,13 @@ import UIKit
 import PlayKit
 import KalturaPlayer
 import PlayKitBroadpeak
+import PlayKitYoubora
 
 class PlayerViewController: UIViewController {
     
     #error("Please set playerKS, urlType, streamerType, assetId, mediaFormats, networkProtocol to relevant values.")
     let playerKS: String? = ""
+
     let autoPlay: Bool = true
     let preload: Bool = false
     
@@ -110,8 +112,13 @@ class PlayerViewController: UIViewController {
         bpConfig.nanoCDNHost = ""
         bpConfig.broadpeakDomainNames = "*"
         bpConfig.uuid = UIDevice.current.identifierForVendor?.uuidString ?? "" // Can be any unique id
+                
+        let youboraPluginParams: [String: Any] = [
+            "accountCode": "kalturatest"
+        ]
+        let analyticsConfig = AnalyticsConfig(params: youboraPluginParams)
         
-        playerOptions.pluginConfig = PluginConfig(config: [BroadpeakMediaEntryInterceptor.pluginName: bpConfig])
+        playerOptions.pluginConfig = PluginConfig(config: [YouboraPlugin.pluginName: analyticsConfig, BroadpeakMediaEntryInterceptor.pluginName: bpConfig])
         
         return playerOptions
     }
@@ -123,6 +130,16 @@ class PlayerViewController: UIViewController {
             
             PKLog.debug("InterceptorEvent.sourceUrlSwitched originalUrl :: \(event.originalUrl ?? "")")
             PKLog.debug("InterceptorEvent.sourceUrlSwitched updatedUrl:: \(event.updatedUrl ?? "")")
+            
+            let youboraPluginParams: [String: Any] = [
+                "accountCode": "kalturatest",
+                "contentCustomDimensions": [
+                              "contentCustomDimension1": "customDimension1",
+                              "contentCustomDimension2": event.updatedUrl ?? ""
+                ]
+            ]
+            let analyticsConfig = AnalyticsConfig(params: youboraPluginParams)
+            self.kalturaOTTPlayer.updatePluginConfig(pluginName: YouboraPlugin.pluginName, config: analyticsConfig)
             
 //            if let event = event as? InterceptorEvent.SourceUrlSwitched,
 //               let originalUrl = event.originalUrl,
