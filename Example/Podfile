@@ -14,11 +14,8 @@ target 'playkit-ios-broadpeak_Example' do
   pod 'PlayKitBroadpeak', :path => '../'
 
   pod 'KalturaPlayer/OTT', '~> 4.0'
-  #pod 'KalturaPlayer/OTT', :path => '../../kaltura-player-ios'
-
-  pod 'PlayKit', '~> 3.20'
-  #pod 'PlayKit', :path => '../../playkit-ios'
   
+  pod 'PlayKitYoubora'
 
   target 'playkit-ios-broadpeak_Tests' do
     inherit! :search_paths

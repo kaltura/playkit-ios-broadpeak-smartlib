@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   
   s.source_files = 'PlayKitBroadpeak/Classes/**/*'
   
-  s.dependency 'PlayKit/AnalyticsCommon', '~> 3.19'
+  s.dependency 'PlayKit/AnalyticsCommon', '~> 3.23'
   s.dependency 'KalturaPlayer/Interceptor'
   s.ios.dependency 'SmartLib-v3/Kaltura', '03.03.05.3791'
   s.tvos.dependency 'SmartLib-v3/Kaltura+tvOS', '03.03.05.3791'
