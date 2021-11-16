@@ -119,20 +119,24 @@ class PlayerViewController: UIViewController {
     private func registerPlayerEvents() {
         handleError()
         
-        kalturaOTTPlayer.addObserver(self, events: [InterceptorEvent.sourceUrlSwitched]) { [weak self] event in
+        kalturaOTTPlayer.addObserver(self, events: [InterceptorEvent.sourceUrlSwitched]) { event in
             
-            if let event = event as? InterceptorEvent.SourceUrlSwitched,
-               let originalUrl = event.originalUrl,
-               let updatedUrl = event.updatedUrl {
-                
-                PKLog.debug("InterceptorEvent.sourceUrlSwitched originalUrl :: \(originalUrl)")
-                PKLog.debug("InterceptorEvent.sourceUrlSwitched updatedUrl:: \(updatedUrl)")
-            }
+            PKLog.debug("InterceptorEvent.sourceUrlSwitched originalUrl :: \(event.originalUrl ?? "")")
+            PKLog.debug("InterceptorEvent.sourceUrlSwitched updatedUrl:: \(event.updatedUrl ?? "")")
+            
+//            if let event = event as? InterceptorEvent.SourceUrlSwitched,
+//               let originalUrl = event.originalUrl,
+//               let updatedUrl = event.updatedUrl {
+//
+//                PKLog.debug("InterceptorEvent.sourceUrlSwitched originalUrl :: \(originalUrl)")
+//                PKLog.debug("InterceptorEvent.sourceUrlSwitched updatedUrl:: \(updatedUrl)")
+//            }
         }
 
     }
     
     private func handleError() {
+        
         kalturaOTTPlayer.addObserver(self, events: [KPPlayerEvent.error]) { [weak self] event in
             guard let self = self else { return }
             DispatchQueue.main.async {

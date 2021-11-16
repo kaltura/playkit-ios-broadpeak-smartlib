@@ -125,7 +125,12 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
                     } else {
                         if let url = URL(string: result.getURL()) {
                             //send SourceUrlSwitched event
-                            self?.messageBus?.post(InterceptorEvent.SourceUrlSwitched(originalUrl: contentURL.absoluteString, updatedUrl: url.absoluteString))
+                            let originalUrl = contentURL.absoluteString
+                            let updatedUrl = url.absoluteString
+                            if (originalUrl != updatedUrl) {
+                                self?.messageBus?.post(InterceptorEvent.SourceUrlSwitched(originalUrl: originalUrl,
+                                                                                          updatedUrl: updatedUrl))
+                            }
                             source.contentUrl = url
                         } else {
                             self?.streamingSession?.stop()
