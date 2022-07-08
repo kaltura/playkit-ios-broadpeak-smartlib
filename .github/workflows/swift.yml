@@ -1,0 +1,15 @@
+name: Swift
+
+on:
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Print
+      run: ls -al
