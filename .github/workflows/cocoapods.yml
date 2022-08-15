@@ -1,0 +1,43 @@
+name: Tag
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  TAGGING:
+    runs-on: macos-latest
+    environment: Tag
+    outputs:
+      output1: ${{ steps.tagging.outputs.tag }}
+        
+    steps:
+      - uses: actions/checkout@v3
+      
+      - id: tagging
+        name: Add git tag
+        run: |
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} sh .github/tag.sh
+          
+  RELEASE_NOTES:
+    runs-on: macos-latest
+    environment: KALTURA
+    needs: TAGGING
+
+    steps:
+    - uses: actions/checkout@v3
+    - run: git pull
+    
+    - name: Updating CocoaPods repo
+      run: pod repo update
+      
+    - name: Prepare release notes
+      run: |
+        sh .github/release_notes.sh
+    
+    - uses: ncipollo/release-action@v1
+      with:
+        tag: ${{needs.TAGGING.outputs.output1}}
+        bodyFile: ".github/release_notes_template.md"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        draft: true
