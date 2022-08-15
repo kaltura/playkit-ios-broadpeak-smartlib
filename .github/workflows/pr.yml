@@ -4,22 +4,22 @@ on:
   pull_request:
     branches: [ "develop" ]
     paths-ignore:
-            - 'docs/**'
-            - 'iOSTestApp/**'
-            - 'tvOSTestApp/**'
-            - 'Example/**'
-            - 'TestApp/**'
-            - 'LICENSE'
-            - '*.md'
+      - 'docs/**'
+      - 'iOSTestApp/**'
+      - 'tvOSTestApp/**'
+      - 'Example/**'
+      - 'TestApp/**'
+      - 'LICENSE'
+      - '*.md'
 
 concurrency:
-    group: PR_${{ github.head_ref }}
-    cancel-in-progress: true
+  group: PR_${{ github.head_ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
-    environment: PR
     runs-on: macos-latest
+    environment: KALTURA
 
     steps:
     - uses: actions/checkout@v3
@@ -28,4 +28,4 @@ jobs:
       run: pod repo update
 
     - name: Pod linting
-      run: pod lib lint --fail-fast --verbose
+      run: pod lib lint --fail-fast --verbose --sources=https://cdn.cocoapods.org/,https://$BP_USERNAME:$BP_PASSWORD@delivery-platform.broadpeak.tv/ios/broadpeak/specs.git

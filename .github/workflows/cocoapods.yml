@@ -1,4 +1,5 @@
 name: Tag
+# This Action only creates a Tag and Release notes without deploying it to Cocoapods.
 
 on:
   workflow_dispatch:
@@ -30,6 +31,9 @@ jobs:
     
     - name: Updating CocoaPods repo
       run: pod repo update
+
+    - name: Pod linting
+      run: pod lib lint --fail-fast --verbose --sources=https://cdn.cocoapods.org/,https://$BP_USERNAME:$BP_PASSWORD@delivery-platform.broadpeak.tv/ios/broadpeak/specs.git
       
     - name: Prepare release notes
       run: |
