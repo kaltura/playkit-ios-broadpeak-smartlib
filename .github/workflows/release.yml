@@ -1,0 +1,47 @@
+name: Tag
+# This Action only creates a Tag and Release notes without deploying it to Cocoapods.
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  TAGGING:
+    runs-on: macos-latest
+    environment: Tag
+    outputs:
+      output1: ${{ steps.tagging.outputs.tag }}
+        
+    steps:
+      - uses: actions/checkout@v3
+      
+      - id: tagging
+        name: Add git tag
+        run: |
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} sh .github/tag.sh
+          
+  RELEASE_NOTES:
+    runs-on: macos-latest
+    environment: KALTURA
+    needs: TAGGING
+
+    steps:
+    - uses: actions/checkout@v3
+    - run: git pull
+    
+    - name: Updating CocoaPods repo
+      run: pod repo update
+
+    - name: Pod linting
+      run: pod lib lint --fail-fast --verbose --sources=https://cdn.cocoapods.org/,https://${{ secrets.BP_USERNAME }}:${{ secrets.BP_PASSWORD }}@delivery-platform.broadpeak.tv/ios/broadpeak/specs.git
+      
+    - name: Prepare release notes
+      run: |
+        sh .github/release_notes.sh
+    
+    - uses: ncipollo/release-action@v1
+      with:
+        tag: ${{needs.TAGGING.outputs.output1}}
+        bodyFile: ".github/release_notes_template.md"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        draft: true
