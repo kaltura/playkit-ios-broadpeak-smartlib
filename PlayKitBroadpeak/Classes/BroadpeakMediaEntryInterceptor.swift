@@ -106,6 +106,8 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
         }
         streamingSession = SmartLib.createStreamingSession()
         
+        updateSessionOptions()
+        
         if let player = self.player {
             self.streamingSession?.attachPlayer(player, listener: self.messageBus)
         }
@@ -157,6 +159,7 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
 // MARK: - SmartLib
 
 extension BroadpeakMediaEntryInterceptor {
+    
     func updateSmartLib() {
         SmartLib.initSmartLib(config.analyticsAddress,
                               nanoCDNHost: config.nanoCDNHost,
@@ -165,5 +168,48 @@ extension BroadpeakMediaEntryInterceptor {
         if !config.uuid.isEmpty {
             SmartLib.setUUID(config.uuid)
         }
+        
+        if let type = config.deviceType {
+            SmartLib.setDeviceType(type)
+        }
+        
+        if let userAgent = config.userAgent {
+            SmartLib.setUserAgent(userAgent)
+        }
+        
+        if let delay = config.nanoCDNResolvingRetryDelay {
+            SmartLib.setNanoCDNResolvingRetryDelay(delay)
+        }
+        
+        if let enabled = config.nanoCDNHttpsEnabled {
+            SmartLib.setNanoCDNHttpsEnabled(enabled)
+        }
     }
+    
+    func updateSessionOptions() {
+        
+        if let adCustomReference = self.config.adCustomReference {
+            
+        }
+        
+        self.config.adParameters?.forEach({ (key: String, value: String) in
+            streamingSession?.setAdParameter(key, value: value)
+        })
+        
+        self.config.customParameters?.forEach({ (key: String, value: String) in
+            streamingSession?.setCustomParameter(key, value: value)
+        })
+        
+        self.config.options?.forEach({ (key: Int32, value: Any) in
+            
+            if let value = value as? Bool {
+                streamingSession?.setOption(key, valueWith: value)
+            } else if let value = value as? String {
+                streamingSession?.setOption(key, valueWith: value)
+            } else if let value = value as? Int32 {
+                streamingSession?.setOption(key, valueWith: value)
+            }
+        })
+    }
+    
 }
