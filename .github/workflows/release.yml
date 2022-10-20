@@ -15,6 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
+      - name: Switching Podspec to release mode
+        run: |
+          sh .github/release_mode.sh
+      
       - id: tagging
         name: Add git tag
         run: |
