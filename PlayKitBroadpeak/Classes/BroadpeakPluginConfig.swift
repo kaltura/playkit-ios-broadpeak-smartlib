@@ -23,7 +23,7 @@ import Foundation
     public var nanoCDNResolvingRetryDelay: TimeInterval?
     public var nanoCDNHttpsEnabled: Bool?
     
-    @objc public var adCustomReference: String?
+    @objc public var adCustomReference: String? // Not supported in iOS
     @objc public var adParameters: [String: String]?
     
     @objc public var customParameters: [String: String]?
