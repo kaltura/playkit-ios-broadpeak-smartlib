@@ -187,10 +187,11 @@ extension BroadpeakMediaEntryInterceptor {
     }
     
     func updateSessionOptions() {
-        
+        /*
         if let adCustomReference = self.config.adCustomReference {
             
         }
+        */
         
         self.config.adParameters?.forEach({ (key: String, value: String) in
             streamingSession?.setAdParameter(key, value: value)
