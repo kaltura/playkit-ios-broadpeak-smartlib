@@ -187,6 +187,7 @@ extension BroadpeakMediaEntryInterceptor {
     }
     
     func updateSessionOptions() {
+        
         /*
         if let adCustomReference = self.config.adCustomReference {
             
