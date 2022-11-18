@@ -96,7 +96,7 @@ import Foundation
     }
     
     @discardableResult
-    @nonobjc public func set(options: [Int32: Any]?) -> Self {
+    @nonobjc public func set(options: [Int32: Any]) -> Self {
         self.options = options
         return self
     }
