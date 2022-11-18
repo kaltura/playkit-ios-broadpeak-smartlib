@@ -25,8 +25,8 @@ Pod::Spec.new do |s|
   
   s.dependency 'PlayKit/AnalyticsCommon', '~> 3.23'
   s.dependency 'KalturaPlayer/Interceptor'
-  s.ios.dependency 'SmartLib-v3/Kaltura', '03.03.05.3791'
-  s.tvos.dependency 'SmartLib-v3/Kaltura+tvOS', '03.03.05.3791'
+  s.ios.dependency 'SmartLib-v3/Kaltura', '04.02.02.1b8c68e'
+  s.tvos.dependency 'SmartLib-v3/Kaltura+tvOS', '04.02.02.1b8c68e'
   
   s.xcconfig = {
 ### The following is required for Xcode 12 (https://stackoverflow.com/questions/63607158/xcode-12-building-for-ios-simulator-but-linking-in-object-file-built-for-ios)
