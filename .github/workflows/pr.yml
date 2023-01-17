@@ -28,4 +28,4 @@ jobs:
       run: pod repo update
 
     - name: Pod linting
-      run: pod lib lint --fail-fast --verbose --sources=https://cdn.cocoapods.org/,https://${{ secrets.BP_USERNAME }}:${{ secrets.BP_PASSWORD }}@delivery-platform.broadpeak.tv/ios/broadpeak/specs.git
+      run: pod lib lint --fail-fast --verbose --sources=https://cdn.cocoapods.org/,https://delivery-platform.broadpeak.tv/ios/broadpeak/specs.git
