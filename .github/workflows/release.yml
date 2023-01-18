@@ -11,19 +11,19 @@ jobs:
     environment: Tag
     outputs:
       output1: ${{ steps.tagging.outputs.tag }}
-        
+
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Switching Podspec to release mode
         run: |
           sh .github/release_mode.sh
-      
+
       - id: tagging
         name: Add git tag
         run: |
           GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} sh .github/tag.sh
-          
+
   RELEASE_NOTES:
     runs-on: macos-latest
     environment: KALTURA
@@ -32,17 +32,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: git pull
-    
+
     - name: Updating CocoaPods repo
       run: pod repo update
 
-    - name: Pod linting
-      run: pod lib lint --fail-fast --verbose --sources=https://cdn.cocoapods.org/,https://${{ secrets.BP_USERNAME }}:${{ secrets.BP_PASSWORD }}@delivery-platform.broadpeak.tv/ios/broadpeak/specs.git
-      
+    - name: CocoaPods push
+      run: |
+        PODS_USER=${{ secrets.PODS_USER }} PODS_PASS=${{ secrets.PODS_PASS }} sh .github/cocoapods_publish.sh
+
     - name: Prepare release notes
       run: |
         sh .github/release_notes.sh
-    
+
     - uses: ncipollo/release-action@v1
       with:
         tag: ${{needs.TAGGING.outputs.output1}}

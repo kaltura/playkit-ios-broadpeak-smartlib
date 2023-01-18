@@ -1,10 +1,6 @@
-load 'plugin-credentials.rb'
-
-# Broadpeak private Cocoapods sources
-source "https://#{@@broadpeak_platform_login}:#{@@broadpeak_platform_password}@delivery-platform.broadpeak.tv/ios/broadpeak/specs.git"
-
 # Cocoapods default sources
 source 'https://github.com/CocoaPods/Specs.git'
+source 'https://delivery-platform.broadpeak.tv/ios/broadpeak/specs.git'
 
 platform :tvos, '10.0'
 
