@@ -7,6 +7,7 @@ on:
 jobs:
 
   TAGGING:
+    name: "Add Git tag"
     runs-on: macos-latest
     environment: Tag
     outputs:
@@ -24,9 +25,10 @@ jobs:
         run: |
           GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} sh .github/tag.sh
 
-  RELEASE_NOTES:
+  LINTING:
+    name: "CocoaPods linting + Release Notes"
     runs-on: macos-latest
-    environment: KALTURA
+    environment: Tag
     needs: TAGGING
 
     steps:
