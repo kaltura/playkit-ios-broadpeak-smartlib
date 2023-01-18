@@ -1,5 +1,5 @@
 # PlayKitBroadpeak
-![Swift 3.0+](https://img.shields.io/badge/Swift-3.0+-orange.svg)
+![Swift 5.0+](https://img.shields.io/badge/Swift-5.0+-orange.svg)
 [![CI Status](https://github.com/kaltura/playkit-ios-broadpeak-smartlib/actions/workflows/ci.yml/badge.svg)](https://github.com/kaltura/playkit-ios-broadpeak-smartlib/actions/workflows/ci.yml)
 
 
@@ -21,10 +21,10 @@ pod 'SmartLib-v3/Generic', '03.02.05.3568' # Make sure this is the latest one!
 Also nees to add folloving to your Podfile:
 ```ruby
 load 'plugin-credentials.rb'
-# Broadpeak private Cocoapods sources
+# Broadpeak Cocoapods sources
 source "https://#{@@broadpeak_platform_login}:#{@@broadpeak_platform_password}@delivery-platform.broadpeak.tv/ios/broadpeak/specs.git"
 ```
-Broadpeak SmartLib dependency hosted in the private repository, that requires authorisation. You have to specify Broadpeak platform credentials in the plugin-credentials.rb file. In the Example folder of Kaltura plugin repository you can find file [Template_plugin-credentials.rb](https://github.com/kaltura/playkit-ios-broadpeak-smartlib/blob/develop/Example/Template_plugin-credentials.rb) Rename it to plugin-credentials.rb and add it to .gitignore if you don't like to share credentials in your repository. You can follow same implementation like in PlayKitBroadpeak Example.
+Broadpeak SmartLib dependency hosted in the repository, that requires authorisation. You have to specify Broadpeak platform credentials in the plugin-credentials.rb file. In the Example folder of Kaltura plugin repository you can find file [Template_plugin-credentials.rb](https://github.com/kaltura/playkit-ios-broadpeak-smartlib/blob/develop/Example/Template_plugin-credentials.rb) Rename it to plugin-credentials.rb and add it to .gitignore if you don't like to share credentials in your repository. You can follow same implementation like in PlayKitBroadpeak Example.
 
 [Example of the podfile you can find by following this link](https://github.com/kaltura/playkit-ios-broadpeak-smartlib/blob/develop/Example/Podfile)  
 
@@ -34,9 +34,9 @@ pod install
 ```
 
 #### Original installation guide for iOS and tvOS Broadpeak SmartLib.
-Follow the steps of how to add Broadpeak private repo to CocoaPods on your Mac.  
+Follow the steps of how to add Broadpeak repo to CocoaPods on your Mac.  
 
-[iOS & tvOS Generic](https://delivery-platform.broadpeak.tv/docs/?solution=ios-tvos-generic)    
+[iOS & tvOS](https://delivery-platform.broadpeak.tv/smartlib/public/project-setup/)    
 
 ## Usage
 ### In the AppDelegate:
