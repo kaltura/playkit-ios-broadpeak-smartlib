@@ -4,4 +4,4 @@
 
 
 ## Cocoapods install
-`pod '@@POD_NAME@@', '~> @@POD_PREFERRED_VERSION@@'`
+`pod '@@POD_NAME@@', :git => 'https://github.com/kaltura/playkit-ios-broadpeak-smartlib', :tag => '@@POD_PREFERRED_VERSION@@'`
