@@ -45,11 +45,11 @@ import KalturaPlayer
         // DidSet functionss are not called in the initializers.
         updateSmartLib()
         
-        messageBus.addObserver(self, events: [PlayerEvent.error], block: { [weak self] event in
+        messageBus.addObserver(self, events: [PlayerEvent.error, PlayerEvent.stopped], block: { [weak self] event in
             guard let self = self else { return }
             
             switch event {
-            case is PlayerEvent.Error:
+            case is PlayerEvent.Error, is PlayerEvent.Stopped:
                 self.streamingSession?.stop()
             default: break
             }
