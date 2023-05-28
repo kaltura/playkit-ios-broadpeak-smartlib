@@ -3,7 +3,7 @@ suffix = '.0000'   # Dev mode
 
 Pod::Spec.new do |s|
   s.name             = 'PlayKitBroadpeak'
-  s.version          = '1.2.1' + suffix
+  s.version          = '1.3.0' + suffix
   s.summary          = 'Kaltura PlayKit plugin for the Broadpeak Delivery Platform.'
   
   s.description      = <<-DESC
