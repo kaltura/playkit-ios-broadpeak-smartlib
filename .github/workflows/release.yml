@@ -1,4 +1,4 @@
-name: Tag
+name: Release
 # This Action only creates a Tag and Release notes without deploying it to Cocoapods.
 
 on:
