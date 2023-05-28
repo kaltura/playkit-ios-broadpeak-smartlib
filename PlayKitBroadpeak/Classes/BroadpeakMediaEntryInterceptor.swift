@@ -64,7 +64,7 @@ import KalturaPlayer
         super.onUpdateConfig(pluginConfig: pluginConfig)
         
         guard let config = pluginConfig as? BroadpeakConfig else {
-            PKLog.error("Wrong plugin config, it is not possible to update Broadpeak plugin")
+            PKLog.error("Wrong plugin config, it is not possible to update Broadpeak plugin.")
             let error = PKPluginError.missingPluginConfig(pluginName: BroadpeakMediaEntryInterceptor.pluginName)
             self.messageBus?.post(PluginEvent.Error(nsError: error.asNSError))
             return
