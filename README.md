@@ -4,6 +4,8 @@
 
 Kaltura Player iOS plugin for Broadpeak SmartLib
 
+The broadpeak SDK latest version can be found [here](https://delivery-platform.broadpeak.tv/smartlib/public/project-setup/#ios--tvos)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
