@@ -14,8 +14,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		90048F2D25765C8F00EBB35D /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90048F2C25765C8F00EBB35D /* PlayerViewController.swift */; };
-		CD350E3C23D3BDCC3F2EE50F /* Pods_playkit_ios_broadpeak_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2265562E98B0A0D533823DE /* Pods_playkit_ios_broadpeak_Example.framework */; };
-		F8BBFE59CD8BCAA26EB55143 /* Pods_playkit_ios_broadpeak_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A6A6F855581AE22AC6F528 /* Pods_playkit_ios_broadpeak_Tests.framework */; };
+		91E001790978FE23DA1EC348 /* Pods_playkit_ios_broadpeak_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3049B922BBA4667AD816E7C2 /* Pods_playkit_ios_broadpeak_Example.framework */; };
+		F3A115DE6650733E051F26F0 /* Pods_playkit_ios_broadpeak_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0BBD4B3224F05A4C918FEB /* Pods_playkit_ios_broadpeak_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		58EC19CFD5B6052DB1C58686 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Example.debug.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3049B922BBA4667AD816E7C2 /* Pods_playkit_ios_broadpeak_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A275C0275FD7EDC187E6A73 /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Example.release.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* playkit-ios-broadpeak_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "playkit-ios-broadpeak_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,15 +41,11 @@
 		607FACE51AFB9204008FA782 /* playkit-ios-broadpeak_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "playkit-ios-broadpeak_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		652F7F5C948BF07E78086A5C /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		90048F2C25765C8F00EBB35D /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
-		9138D93162466E15F880D097 /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A1CDFE946FC24051DB3813C9 /* Pods_playkit_tvos_broadpeak_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_tvos_broadpeak_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0A6A6F855581AE22AC6F528 /* Pods_playkit_ios_broadpeak_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7A8CE8CDF2519DF9E8A8E96 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C0AEE0F5A94F87E1B6E27062 /* Pods-playkit-tvos-broadpeak_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-tvos-broadpeak_Example.debug.xcconfig"; path = "Target Support Files/Pods-playkit-tvos-broadpeak_Example/Pods-playkit-tvos-broadpeak_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E0E5807C353CCB5AD3E81778 /* Pods-playkit-tvos-broadpeak_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-tvos-broadpeak_Example.release.xcconfig"; path = "Target Support Files/Pods-playkit-tvos-broadpeak_Example/Pods-playkit-tvos-broadpeak_Example.release.xcconfig"; sourceTree = "<group>"; };
-		EA0977C22E8E5FF6C627218E /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Example.release.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F2265562E98B0A0D533823DE /* Pods_playkit_ios_broadpeak_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26EAE337E129E0F23121EE7 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Example.debug.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DCA1F938E05911BD8788EBA0 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; path = "Target Support Files/Pods-playkit-ios-broadpeak_Tests/Pods-playkit-ios-broadpeak_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DD0BBD4B3224F05A4C918FEB /* Pods_playkit_ios_broadpeak_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playkit_ios_broadpeak_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD350E3C23D3BDCC3F2EE50F /* Pods_playkit_ios_broadpeak_Example.framework in Frameworks */,
+				91E001790978FE23DA1EC348 /* Pods_playkit_ios_broadpeak_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8BBFE59CD8BCAA26EB55143 /* Pods_playkit_ios_broadpeak_Tests.framework in Frameworks */,
+				F3A115DE6650733E051F26F0 /* Pods_playkit_ios_broadpeak_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +75,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				FE0AEC577E26C56DA90636AD /* Pods */,
-				AF766A878EBBA4122DAB01C7 /* Frameworks */,
+				AC4B3032BB466A1BCA012D6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,12 +128,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AF766A878EBBA4122DAB01C7 /* Frameworks */ = {
+		AC4B3032BB466A1BCA012D6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F2265562E98B0A0D533823DE /* Pods_playkit_ios_broadpeak_Example.framework */,
-				B0A6A6F855581AE22AC6F528 /* Pods_playkit_ios_broadpeak_Tests.framework */,
-				A1CDFE946FC24051DB3813C9 /* Pods_playkit_tvos_broadpeak_Example.framework */,
+				3049B922BBA4667AD816E7C2 /* Pods_playkit_ios_broadpeak_Example.framework */,
+				DD0BBD4B3224F05A4C918FEB /* Pods_playkit_ios_broadpeak_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,12 +140,10 @@
 		FE0AEC577E26C56DA90636AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				58EC19CFD5B6052DB1C58686 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */,
-				EA0977C22E8E5FF6C627218E /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */,
-				9138D93162466E15F880D097 /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */,
-				B7A8CE8CDF2519DF9E8A8E96 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */,
-				C0AEE0F5A94F87E1B6E27062 /* Pods-playkit-tvos-broadpeak_Example.debug.xcconfig */,
-				E0E5807C353CCB5AD3E81778 /* Pods-playkit-tvos-broadpeak_Example.release.xcconfig */,
+				D26EAE337E129E0F23121EE7 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */,
+				3A275C0275FD7EDC187E6A73 /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */,
+				652F7F5C948BF07E78086A5C /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */,
+				DCA1F938E05911BD8788EBA0 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -161,11 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "playkit-ios-broadpeak_Example" */;
 			buildPhases = (
-				D4F962825DFCFE959E2A63B1 /* [CP] Check Pods Manifest.lock */,
+				1DCA424EA5C965C486CE6227 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				568601D4F11A37EC7AF483DF /* [CP] Embed Pods Frameworks */,
+				B11B092DA991A5E0A0C4B93B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,7 +174,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "playkit-ios-broadpeak_Tests" */;
 			buildPhases = (
-				0FDB301646BDA82611B62F71 /* [CP] Check Pods Manifest.lock */,
+				AA9F2C97FC8B9E3AB42ED503 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -259,7 +253,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0FDB301646BDA82611B62F71 /* [CP] Check Pods Manifest.lock */ = {
+		1DCA424EA5C965C486CE6227 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-playkit-ios-broadpeak_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA9F2C97FC8B9E3AB42ED503 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,7 +297,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		568601D4F11A37EC7AF483DF /* [CP] Embed Pods Frameworks */ = {
+		B11B092DA991A5E0A0C4B93B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -323,28 +339,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D4F962825DFCFE959E2A63B1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-playkit-ios-broadpeak_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -443,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -489,7 +483,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -499,11 +493,12 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58EC19CFD5B6052DB1C58686 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */;
+			baseConfigurationReference = D26EAE337E129E0F23121EE7 /* Pods-playkit-ios-broadpeak_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = "playkit-ios-broadpeak/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.playkit-ios-broadpeak-Example";
@@ -516,11 +511,12 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA0977C22E8E5FF6C627218E /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */;
+			baseConfigurationReference = 3A275C0275FD7EDC187E6A73 /* Pods-playkit-ios-broadpeak_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = "playkit-ios-broadpeak/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.playkit-ios-broadpeak-Example";
@@ -533,7 +529,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9138D93162466E15F880D097 /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */;
+			baseConfigurationReference = 652F7F5C948BF07E78086A5C /* Pods-playkit-ios-broadpeak_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -545,6 +541,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,7 +553,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7A8CE8CDF2519DF9E8A8E96 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */;
+			baseConfigurationReference = DCA1F938E05911BD8788EBA0 /* Pods-playkit-ios-broadpeak_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -564,6 +561,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
