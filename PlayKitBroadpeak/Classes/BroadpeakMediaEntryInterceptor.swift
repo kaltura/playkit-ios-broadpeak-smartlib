@@ -11,11 +11,11 @@
 import PlayKit
 import KalturaPlayer
 
-#if os(iOS)
-    import SmartLib
-#elseif os(tvOS)
-    import SmartLib_tvOS
-#endif
+//#if os(iOS)
+//    import SmartLib
+//#elseif os(tvOS)
+//    import SmartLib_tvOS
+//#endif
 
 @objc public class BroadpeakMediaEntryInterceptor: BasePlugin {
     
@@ -23,7 +23,7 @@ import KalturaPlayer
         return "BroadpeakMediaEntryInterceptor/Plugin"
     }
     
-    var streamingSession: StreamingSession?
+//    var streamingSession: StreamingSession?
     var config: BroadpeakConfig {
         didSet {
             updateSmartLib()
@@ -48,11 +48,11 @@ import KalturaPlayer
         messageBus.addObserver(self, events: [PlayerEvent.error, PlayerEvent.stopped], block: { [weak self] event in
             guard let self = self else { return }
             
-            switch event {
-            case is PlayerEvent.Error, is PlayerEvent.Stopped:
-                self.streamingSession?.stop()
-            default: break
-            }
+//            switch event {
+//            case is PlayerEvent.Error, is PlayerEvent.Stopped:
+//                self.streamingSession?.stop()
+//            default: break
+//            }
         })
     }
     
@@ -71,8 +71,8 @@ import KalturaPlayer
         }
         
         if !self.config.isEqual(config) {
-            streamingSession?.stop()
-            SmartLib.release()
+//            streamingSession?.stop()
+//            SmartLib.release()
             self.config = config
         }
     }
@@ -81,8 +81,8 @@ import KalturaPlayer
         self.messageBus?.removeObserver(self, events: [PlayerEvent.error])
         
         completionHandler = nil
-        streamingSession?.stop()
-        SmartLib.release()
+//        streamingSession?.stop()
+//        SmartLib.release()
         
         super.destroy()
     }
@@ -101,58 +101,58 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
         
         completionHandler = completion
         
-        if streamingSession != nil {
-            streamingSession?.stop()
-        }
-        streamingSession = SmartLib.createStreamingSession()
+//        if streamingSession != nil {
+//            streamingSession?.stop()
+//        }
+//        streamingSession = SmartLib.createStreamingSession()
         
         updateSessionOptions()
         
         if let player = self.player {
-            self.streamingSession?.attachPlayer(player, listener: self.messageBus)
+//            self.streamingSession?.attachPlayer(player, listener: self.messageBus)
         }
         
-        DispatchQueue.global(qos: .default).async { [weak self] in
-            
-            if let source = sources.first,
-               let contentURL = source.contentUrl,
-               let result = self?.streamingSession?.getURL(contentURL.absoluteString) {
-                
-                DispatchQueue.main.async {
-                    
-                    if result.isError() {
-                        self?.streamingSession?.stop()
-                        PKLog.error("SmartLib internal error occurred")
-                        self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibError(Int(result.getErrorCode()), result.getErrorMessage())))
-                    } else {
-                        if let url = URL(string: result.getURL()) {
-                            //send SourceUrlSwitched event
-                            let originalUrl = contentURL.absoluteString
-                            let updatedUrl = url.absoluteString
-                            if (originalUrl != updatedUrl) {
-                                self?.messageBus?.post(InterceptorEvent.SourceUrlSwitched(originalUrl: originalUrl,
-                                                                                          updatedUrl: updatedUrl))
-                            }
-                            source.contentUrl = url
-                        } else {
-                            self?.streamingSession?.stop()
-                            PKLog.error("SmartLib Streaming Session returned incorrect URL")
-                            self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibBadUrl))
-                        }
-                    }
-                }
-            } else {
-                DispatchQueue.main.async {
-                    self?.streamingSession?.stop()
-                    PKLog.error("Missed MediaEntry source.contentUrl or SmartLib stream URL is incorrect")
-                    self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.unknown))
-                }
-            }
-            
-            DispatchQueue.main.async {
-                self?.completionHandler?()
-            }
-        }
+//        DispatchQueue.global(qos: .default).async { [weak self] in
+//            
+//            if let source = sources.first,
+//               let contentURL = source.contentUrl,
+//               let result = self?.streamingSession?.getURL(contentURL.absoluteString) {
+//                
+//                DispatchQueue.main.async {
+//                    
+//                    if result.isError() {
+//                        self?.streamingSession?.stop()
+//                        PKLog.error("SmartLib internal error occurred")
+//                        self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibError(Int(result.getErrorCode()), result.getErrorMessage())))
+//                    } else {
+//                        if let url = URL(string: result.getURL()) {
+//                            //send SourceUrlSwitched event
+//                            let originalUrl = contentURL.absoluteString
+//                            let updatedUrl = url.absoluteString
+//                            if (originalUrl != updatedUrl) {
+//                                self?.messageBus?.post(InterceptorEvent.SourceUrlSwitched(originalUrl: originalUrl,
+//                                                                                          updatedUrl: updatedUrl))
+//                            }
+//                            source.contentUrl = url
+//                        } else {
+//                            self?.streamingSession?.stop()
+//                            PKLog.error("SmartLib Streaming Session returned incorrect URL")
+//                            self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.smartLibBadUrl))
+//                        }
+//                    }
+//                }
+//            } else {
+//                DispatchQueue.main.async {
+//                    self?.streamingSession?.stop()
+//                    PKLog.error("Missed MediaEntry source.contentUrl or SmartLib stream URL is incorrect")
+//                    self?.messageBus?.post(BroadpeakEvent.Error(error: BroadpeakPluginError.unknown))
+//                }
+//            }
+//            
+//            DispatchQueue.main.async {
+//                self?.completionHandler?()
+//            }
+//        }
     }
 }
 
@@ -161,29 +161,29 @@ extension BroadpeakMediaEntryInterceptor: PKMediaEntryInterceptor {
 extension BroadpeakMediaEntryInterceptor {
     
     func updateSmartLib() {
-        SmartLib.initSmartLib(config.analyticsAddress,
-                              nanoCDNHost: config.nanoCDNHost,
-                              broadpeakDomainNames: config.broadpeakDomainNames)
-        
-        if !config.uuid.isEmpty {
-            SmartLib.setUUID(config.uuid)
-        }
-        
-        if let type = config.deviceType {
-            SmartLib.setDeviceType(type)
-        }
-        
-        if let userAgent = config.userAgent {
-            SmartLib.setUserAgent(userAgent)
-        }
-        
-        if let delay = config.nanoCDNResolvingRetryDelay {
-            SmartLib.setNanoCDNResolvingRetryDelay(delay)
-        }
-        
-        if let enabled = config.nanoCDNHttpsEnabled {
-            SmartLib.setNanoCDNHttpsEnabled(enabled)
-        }
+//        SmartLib.initSmartLib(config.analyticsAddress,
+//                              nanoCDNHost: config.nanoCDNHost,
+//                              broadpeakDomainNames: config.broadpeakDomainNames)
+//        
+//        if !config.uuid.isEmpty {
+//            SmartLib.setUUID(config.uuid)
+//        }
+//        
+//        if let type = config.deviceType {
+//            SmartLib.setDeviceType(type)
+//        }
+//        
+//        if let userAgent = config.userAgent {
+//            SmartLib.setUserAgent(userAgent)
+//        }
+//        
+//        if let delay = config.nanoCDNResolvingRetryDelay {
+//            SmartLib.setNanoCDNResolvingRetryDelay(delay)
+//        }
+//        
+//        if let enabled = config.nanoCDNHttpsEnabled {
+//            SmartLib.setNanoCDNHttpsEnabled(enabled)
+//        }
     }
     
     func updateSessionOptions() {
@@ -194,24 +194,24 @@ extension BroadpeakMediaEntryInterceptor {
         }
         */
         
-        self.config.adParameters?.forEach({ (key: String, value: String) in
-            streamingSession?.setAdParameter(key, value: value)
-        })
-        
-        self.config.customParameters?.forEach({ (key: String, value: String) in
-            streamingSession?.setCustomParameter(key, value: value)
-        })
-        
-        self.config.options?.forEach({ (key: Int32, value: Any) in
-            
-            if let value = value as? Bool {
-                streamingSession?.setOption(key, valueWith: value)
-            } else if let value = value as? String {
-                streamingSession?.setOption(key, valueWith: value)
-            } else if let value = value as? Int32 {
-                streamingSession?.setOption(key, valueWith: value)
-            }
-        })
+//        self.config.adParameters?.forEach({ (key: String, value: String) in
+//            streamingSession?.setAdParameter(key, value: value)
+//        })
+//        
+//        self.config.customParameters?.forEach({ (key: String, value: String) in
+//            streamingSession?.setCustomParameter(key, value: value)
+//        })
+//        
+//        self.config.options?.forEach({ (key: Int32, value: Any) in
+//            
+//            if let value = value as? Bool {
+//                streamingSession?.setOption(key, valueWith: value)
+//            } else if let value = value as? String {
+//                streamingSession?.setOption(key, valueWith: value)
+//            } else if let value = value as? Int32 {
+//                streamingSession?.setOption(key, valueWith: value)
+//            }
+//        })
     }
     
 }

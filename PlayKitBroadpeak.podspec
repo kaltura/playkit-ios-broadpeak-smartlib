@@ -28,8 +28,8 @@ Pod::Spec.new do |s|
   #s.ios.dependency 'SmartLib-v3/Kaltura', '04.02.04.1f725a1'
   #s.tvos.dependency 'SmartLib-v3/Kaltura+tvOS', '04.02.04.1f725a1'
   
-  s.ios.dependency 'SmartLib-v3/Kaltura', '05.00.03.5627224'
-  s.tvos.dependency 'SmartLib-v3/Kaltura+tvOS', '05.00.03.5627224'
+  #s.ios.dependency 'SmartLib-v3/Kaltura', '05.00.03.5627224'
+  #s.tvos.dependency 'SmartLib-v3/Kaltura+tvOS', '05.00.03.5627224'
 
   s.xcconfig = {
 ### The following is required for Xcode 12 (https://stackoverflow.com/questions/63607158/xcode-12-building-for-ios-simulator-but-linking-in-object-file-built-for-ios)
