@@ -288,7 +288,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-playkit-ios-broadpeak_Example/Pods-playkit-ios-broadpeak_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/KalturaPlayer/KalturaPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
@@ -305,7 +304,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
@@ -443,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -489,7 +487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -504,8 +502,38 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = "playkit-ios-broadpeak/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"KalturaNetKit\"",
+					"-framework",
+					"\"KalturaPlayer\"",
+					"-framework",
+					"\"ObjcExceptionBridging\"",
+					"-framework",
+					"\"PlayKit\"",
+					"-framework",
+					"\"PlayKitBroadpeak\"",
+					"-framework",
+					"\"PlayKitKava\"",
+					"-framework",
+					"\"PlayKitProviders\"",
+					"-framework",
+					"\"PlayKitUtils\"",
+					"-framework",
+					"\"SmartLib\"",
+					"-framework",
+					"\"SmartLibKaltura\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SwiftyXMLParser\"",
+					"-framework",
+					"\"XCGLogger\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.playkit-ios-broadpeak-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -521,8 +549,38 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = "playkit-ios-broadpeak/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"KalturaNetKit\"",
+					"-framework",
+					"\"KalturaPlayer\"",
+					"-framework",
+					"\"ObjcExceptionBridging\"",
+					"-framework",
+					"\"PlayKit\"",
+					"-framework",
+					"\"PlayKitBroadpeak\"",
+					"-framework",
+					"\"PlayKitKava\"",
+					"-framework",
+					"\"PlayKitProviders\"",
+					"-framework",
+					"\"PlayKitUtils\"",
+					"-framework",
+					"\"SmartLib\"",
+					"-framework",
+					"\"SmartLibKaltura\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SwiftyXMLParser\"",
+					"-framework",
+					"\"XCGLogger\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.playkit-ios-broadpeak-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;

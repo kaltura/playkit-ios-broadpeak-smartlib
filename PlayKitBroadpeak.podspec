@@ -3,7 +3,7 @@ suffix = '.0000'   # Dev mode
 
 Pod::Spec.new do |s|
   s.name             = 'PlayKitBroadpeak'
-  s.version          = '1.3.1' + suffix
+  s.version          = '1.3.2' + suffix
   s.summary          = 'Kaltura PlayKit plugin for the Broadpeak Delivery Platform.'
   
   s.description      = <<-DESC
@@ -18,16 +18,19 @@ Pod::Spec.new do |s|
   
   s.swift_version     = '5.0'
   
-  s.ios.deployment_target = '10.0'
-  s.tvos.deployment_target = '10.0'
+  s.ios.deployment_target = '13.0'
+  s.tvos.deployment_target = '13.0'
   
   s.source_files = 'PlayKitBroadpeak/Classes/**/*'
   
   s.dependency 'PlayKit/AnalyticsCommon', '~> 3.23'
   s.dependency 'KalturaPlayer/Interceptor'
-  s.ios.dependency 'SmartLib-v3/Kaltura', '04.02.04.1f725a1'
-  s.tvos.dependency 'SmartLib-v3/Kaltura+tvOS', '04.02.04.1f725a1'
+  #s.ios.dependency 'SmartLib-v3/Kaltura', '04.02.04.1f725a1'
+  #s.tvos.dependency 'SmartLib-v3/Kaltura+tvOS', '04.02.04.1f725a1'
   
+  s.ios.dependency 'SmartLib-v3/Kaltura', '05.00.03.5627224'
+  s.tvos.dependency 'SmartLib-v3/Kaltura+tvOS', '05.00.03.5627224'
+
   s.xcconfig = {
 ### The following is required for Xcode 12 (https://stackoverflow.com/questions/63607158/xcode-12-building-for-ios-simulator-but-linking-in-object-file-built-for-ios)
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',

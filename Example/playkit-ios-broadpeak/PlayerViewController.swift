@@ -13,7 +13,7 @@ import PlayKitBroadpeak
 
 class PlayerViewController: UIViewController {
     
-    #error("Please set playerKS, urlType, streamerType, assetId, mediaFormats, networkProtocol to relevant values.")
+//    #error("Please set playerKS, urlType, streamerType, assetId, mediaFormats, networkProtocol to relevant values.")
     let playerKS: String? = ""
     let autoPlay: Bool = true
     let preload: Bool = false
