@@ -12,6 +12,8 @@ target 'playkit-ios-broadpeak_Example' do
   pod 'KalturaPlayer/OTT', '~> 4.0'
   #pod 'KalturaPlayer/OTT', :path => '../../kaltura-player-ios'
 
+  pod 'SwiftyJSON', '~> 4.1'
+  
   target 'playkit-ios-broadpeak_Tests' do
     inherit! :search_paths
 
